@@ -1,19 +1,10 @@
-import React from "react";
+import React from 'react'
+import Header from './components/header/Header'
 
-function App() {
+function App (): JSX.Element {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p></p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        ></a>
-      </header>
-    </div>
-  );
+    <Header />
+  )
 }
 
-export default App;
+export default App
