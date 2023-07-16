@@ -1,0 +1,24 @@
+.header-button {
+  color: rgb(78, 78, 78);
+  background-color: white;
+  border: 1px rgb(78, 78, 78) solid;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#header-div {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  height: 50px;
+  align-items: center;
+  z-index: 10;
+}
+.button-numbers {
+  display: inline-block;
+  font-size: 11px;
+  color: #0bbb87;
+}

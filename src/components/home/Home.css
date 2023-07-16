@@ -1,0 +1,59 @@
+#backround-rectangle {
+  height: 200px;
+  position: absolute;
+  right: 100px;
+  width: 200px;
+  box-shadow: 0.5px 0.5px 200px black;
+  animation: rectangle-load 300ms ease-out;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+@keyframes rectangle-load {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+body {
+  background-color: #eaeaea;
+}
+
+#home-div {
+  margin-top: 100px;
+  min-height: 300px;
+  background-color: #eaeaea;
+}
+
+#current-position {
+  font-size: 20px;
+  color: #0bbb87;
+  display: flex;
+  align-items: center;
+}
+
+#name {
+  font-size: 70px;
+  color: black;
+  z-index: 2;
+}
+
+#star-icon {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.page-line {
+  border-bottom: 1.5px black solid;
+}
+
+.additional-symbols {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

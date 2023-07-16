@@ -1,0 +1,82 @@
+#experience-div {
+  display: flex;
+  padding-top: 10px;
+}
+
+#experience-div :last-child {
+  margin-right: 0;
+}
+
+#experience-div :first-child {
+  margin-left: 0;
+}
+
+.experience-div {
+  flex: 1;
+  margin: 10px;
+}
+
+.experience-photo-div {
+  height: 140px; /* this has to have media query as this is now unresponsives*/
+}
+
+.experience-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-div {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.date-div,
+.place-div {
+  font-size: 13px;
+}
+
+.date-div {
+  margin-top: 12px;
+  color: rgb(78, 78, 78);
+  font-weight: 400;
+}
+
+.place-div {
+  font-weight: 500;
+}
+
+.description-div {
+  margin-top: 13px;
+  font-weight: 500;
+}
+
+.expand-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 50% / 50% 50% 50% 50%;
+  border: 1px solid black;
+  margin-top: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.additional-info-div {
+  margin: 10px;
+  margin-left: 0;
+  width: 25px;
+  cursor: pointer;
+}
+
+.additional-info-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s;
+}
+
+.additional-info-img:hover {
+  backdrop-filter: blur(8px);
+  transform: scale(1.2);
+}
