@@ -1,0 +1,15 @@
+#star-icon {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.page-line {
+  border-bottom: 1.5px black solid;
+}
+
+.additional-symbols {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

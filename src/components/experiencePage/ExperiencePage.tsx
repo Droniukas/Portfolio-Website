@@ -1,6 +1,6 @@
 import React from 'react';
-import experience1 from './experience-1.avif';
-import additionalInfo from './additional-info.png';
+import experience1 from './resources/images/experience-1.avif';
+import additionalInfo from './resources/images/additional-info.png';
 import { Experience } from '../../interfaces/Experience.interface';
 import './ExperiencePage.css';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
@@ -30,12 +30,11 @@ const ExperiencePage = () => {
     },
   ];
   return (
-    <div id="experience-div">
-      {experiences.map((experience) => {
-        return (
-          <>
-            <SectionSeperator name="Experience" />
-
+    <>
+      <SectionSeperator name="02. -- experience" />
+      <div id="experience-div">
+        {experiences.map((experience) => {
+          return (
             <div key={experience.name} className="experience-div">
               <div className="experience-photo-div">
                 <img src={experience.image} className="experience-img" />
@@ -44,11 +43,16 @@ const ExperiencePage = () => {
               <div className="date-div">{experience.date}</div>
               <div className="place-div">{experience.place}</div>
               <div className="description-div">{experience.description}</div>
+
+              <div className="additional-info-div">
+                <img className="additional-info-img" src={additionalInfo} />
+              </div>
+              <div className="page-line" />
             </div>
-          </>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

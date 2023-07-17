@@ -1,17 +1,19 @@
 import React from 'react';
-import starIconBlack from './star-christmas-black.png';
+import starIconBlack from './resources/images/star-christmas-black.png';
+import './SectionSeperator.css';
 
 type SectionSeperatorProps = {
   name: string;
+  hasIcon?: boolean;
 };
 
 const SectionSeperator = (props: SectionSeperatorProps) => {
-  const { name } = props;
+  const { name, hasIcon } = props;
   return (
     <>
       <div className="additional-symbols">
-        <img src={starIconBlack} id="star-icon" />
-        01. -- {name}
+        {hasIcon !== false && <img src={starIconBlack} id="star-icon" />}
+        {name}
       </div>
       <div className="page-line" />
     </>

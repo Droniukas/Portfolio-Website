@@ -51,17 +51,6 @@
   font-weight: 500;
 }
 
-.expand-button {
-  width: 100%;
-  height: 50px;
-  border-radius: 50% / 50% 50% 50% 50%;
-  border: 1px solid black;
-  margin-top: 15px;
-  background-color: transparent;
-  cursor: pointer;
-  font-weight: 500;
-}
-
 .additional-info-div {
   margin: 10px;
   margin-left: 0;
