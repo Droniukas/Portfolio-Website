@@ -1,7 +1,7 @@
 #about-div {
   display: flex;
   height: 650px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -23,8 +23,9 @@
 }
 
 .about-middle-div {
-  height: 300px;
+  height: 530px;
   padding: 10px;
+  padding-bottom: 0;
 }
 
 #about-horizontal-border-top {
@@ -69,7 +70,6 @@
 #about-page-big-text-div {
   font-size: 23px;
   padding-bottom: 20px;
-  margin-bottom: 20px;
   font-weight: 500;
   width: 50%;
   border-bottom: 1px solid black;
@@ -78,4 +78,5 @@
 #about-page-smaller-text-div {
   font-size: 14px;
   width: 50%;
+  padding-top: 20px;
 }

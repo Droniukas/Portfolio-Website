@@ -25,12 +25,12 @@ body {
 
 #home-div {
   margin-top: 100px;
-  max-height: 700px;
+  height: 700px;
   background-color: #eaeaea;
 }
 
 #current-position {
-  font-size: 25px;
+  font-size: 30px;
   color: rgb(78, 78, 78);
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ body {
 }
 
 #name {
-  font-size: 70px;
+  font-size: 75px;
   color: black;
   z-index: 2;
   font-weight: 500;
@@ -64,7 +64,7 @@ body {
 }
 
 #home-page-all-bottom-items-div {
-  margin-top: 25%;
+  margin-top: 22%;
   margin-bottom: 45px;
 }
 
@@ -76,4 +76,15 @@ body {
   background-color: transparent;
   cursor: pointer;
   font-weight: 500;
+}
+
+#home-page-above-bottom-line-items-div {
+  font-size: 14px;
+  display: flex;
+}
+
+#home-page-star-icon-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
 }

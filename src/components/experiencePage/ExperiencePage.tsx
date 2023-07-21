@@ -1,5 +1,7 @@
 import React from 'react';
-import experience1 from './resources/images/experience-1.avif';
+import experience1 from './resources/images/experience-1.png';
+import experience2 from './resources/images/experience-2.jpg';
+import experience3 from './resources/images/experience-3.jpg';
 import additionalInfo from './resources/images/additional-info.png';
 import { Experience } from '../../interfaces/Experience.interface';
 import './ExperiencePage.css';
@@ -15,18 +17,19 @@ const ExperiencePage = () => {
       description: 'I made 3D visualizations for real-estate clients using compupter software.',
     },
     {
-      image: experience1,
-      name: 'Visualizations and design',
-      date: '2021-22',
+      image: experience2,
+      name: 'Self-tought programmer',
+      date: 'from 2022',
       place: 'Šiauliai, Lithuania',
-      description: 'I made 3D visualizations for real-estate clients using compupter software.',
+      description: 'I started on my self-thought path by taking online courses and building small projects.',
     },
     {
-      image: experience1,
-      name: 'Visualizations and design',
-      date: '2021-22',
-      place: 'Šiauliai, Lithuania',
-      description: 'I made 3D visualizations for real-estate clients using compupter software.',
+      image: experience3,
+      name: 'Full-stack developer academy/internship @Devbridge',
+      date: '2023 March - 2023 May',
+      place: 'Kaunas, Lithuania',
+      description:
+        'Here I got hands-on experience working in an Agile team and built a sophisticated full-stack web application.',
     },
   ];
   return (

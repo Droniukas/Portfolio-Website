@@ -13,6 +13,7 @@ const AboutPage = () => {
           <div className="about-middle-div">
             <img src={profilePhoto} id="about-image" />
           </div>
+          <div className="about-bottom-div"></div>
         </div>
         <div id="about-div-text">
           <div className="about-vertical-border" id="about-vertical-border-left" />

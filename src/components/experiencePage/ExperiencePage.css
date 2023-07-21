@@ -1,6 +1,8 @@
 #experience-div {
   display: flex;
-  padding-top: 10px;
+  height: 650px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 #experience-div :last-child {
@@ -14,10 +16,12 @@
 .experience-div {
   flex: 1;
   margin: 10px;
+  margin-top: 0;
 }
 
 .experience-photo-div {
-  height: 140px; /* this has to have media query as this is now unresponsives*/
+  height: 40%;
+  width: 100%; /* this has to have media query as this is now unresponsive (not sure why I wrote this?)*/
 }
 
 .experience-img {
