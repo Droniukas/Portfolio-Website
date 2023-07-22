@@ -1,0 +1,19 @@
+#skills-div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-div {
+  display: flex;
+  background-color: #d1d1d1;
+  width: 200px;
+  font-weight: 900;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.skill-img {
+  width: 30px;
+  margin: 20px;
+}

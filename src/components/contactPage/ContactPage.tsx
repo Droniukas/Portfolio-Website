@@ -7,12 +7,9 @@ const ContactPage = () => {
     <>
       <SectionSeperator name="03. -- contact" />
       <div id="contact-div">
-        <div id="contact-page-left-side-div">Contact me!</div>
+        <div id="contact-page-left-side-div">Contact me</div>
         <div id="contact-page-right-side-div">
-          <div id="contact-page-right-side-top-div">
-            If you have questions or need any general information, please contact me and I will reply to you as soon as
-            possible. It will be an honor to talk to you!
-          </div>
+          <div id="contact-page-right-side-top-div">It would be an honor to talk to you!</div>
           <div id="contact-page-right-side-bottom-div">
             <div id="general-info-div">
               <div className="contact-page-bolded-info">GENERAL INFORMATION</div>

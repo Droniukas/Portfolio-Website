@@ -6,6 +6,7 @@ import additionalInfo from './resources/images/additional-info.png';
 import { Experience } from '../../interfaces/Experience.interface';
 import './ExperiencePage.css';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
+import SkillsPage from '../skillsPage/SkillsPage';
 
 const ExperiencePage = () => {
   const experiences: Experience[] = [
@@ -25,7 +26,7 @@ const ExperiencePage = () => {
     },
     {
       image: experience3,
-      name: 'Full-stack developer academy/internship @Devbridge',
+      name: 'Full-stack developer academy @Devbridge',
       date: '2023 March - 2023 May',
       place: 'Kaunas, Lithuania',
       description:
@@ -34,26 +35,31 @@ const ExperiencePage = () => {
   ];
   return (
     <>
-      <SectionSeperator name="02. -- experience" />
-      <div id="experience-div">
-        {experiences.map((experience) => {
-          return (
-            <div key={experience.name} className="experience-div">
-              <div className="experience-photo-div">
-                <img src={experience.image} className="experience-img" />
-              </div>
-              <div className="name-div">{experience.name}</div>
-              <div className="date-div">{experience.date}</div>
-              <div className="place-div">{experience.place}</div>
-              <div className="description-div">{experience.description}</div>
+      <div>
+        <SectionSeperator name="02. -- experience" />
+        <div id="experience-div">
+          <SkillsPage />
+          <div id="experience-grid">
+            {experiences.map((experience) => {
+              return (
+                <div key={experience.name} className="experience-div">
+                  <div className="experience-photo-div">
+                    <img src={experience.image} className="experience-img" />
+                  </div>
+                  <div className="name-div">{experience.name}</div>
+                  <div className="date-div">{experience.date}</div>
+                  <div className="place-div">{experience.place}</div>
+                  <div className="description-div">{experience.description}</div>
 
-              <div className="additional-info-div">
-                <img className="additional-info-img" src={additionalInfo} />
-              </div>
-              <div className="page-line" />
-            </div>
-          );
-        })}
+                  <div className="additional-info-div">
+                    <img className="additional-info-img" src={additionalInfo} />
+                  </div>
+                  <div className="page-line" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </>
   );

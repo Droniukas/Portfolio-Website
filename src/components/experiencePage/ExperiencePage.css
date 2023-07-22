@@ -1,26 +1,21 @@
 #experience-div {
-  display: flex;
-  height: 650px;
+  min-height: 650px;
   margin-top: 20px;
   margin-bottom: 50px;
 }
 
-#experience-div :last-child {
-  margin-right: 0;
-}
-
-#experience-div :first-child {
-  margin-left: 0;
+#experience-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
 }
 
 .experience-div {
-  flex: 1;
-  margin: 10px;
   margin-top: 0;
 }
 
 .experience-photo-div {
-  height: 40%;
+  height: 30%;
   width: 100%; /* this has to have media query as this is now unresponsive (not sure why I wrote this?)*/
 }
 
