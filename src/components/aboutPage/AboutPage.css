@@ -1,13 +1,12 @@
 #about-div {
   display: flex;
-  height: 650px;
-  margin-top: 20px;
+  min-height: 650px;
   margin-bottom: 50px;
   position: relative;
 }
 
 #about-div-photo {
-  flex: 6;
+  flex: 6; /*this is supposed to be 3*/
 }
 
 #about-div-text {
@@ -19,13 +18,23 @@
 }
 
 .about-top-div {
-  height: 50px;
+  min-height: 50px;
 }
 
 .about-middle-div {
-  height: 530px;
+  min-height: 530px;
   padding: 10px;
-  padding-bottom: 0;
+  padding-bottom: 50px;
+  margin-bottom: 5px;
+}
+
+#about-image-div {
+  height: 530px;
+}
+
+#about-image-top-div {
+  padding: 10px;
+  height: auto; /*this is supposed to be 530px*/
 }
 
 #about-horizontal-border-top {
@@ -34,7 +43,19 @@
   height: 0.5px;
   position: absolute;
   left: 0;
-  top: 50px;
+  top: 50px; /*this is going to be 550px*/
+}
+
+@media all and (max-width: 1000px) {
+  #about-horizontal-border-top {
+    top: 550px;
+  }
+  #about-image-top-div {
+    height: 530px;
+  }
+  #about-div-photo {
+    flex: 3;
+  }
 }
 
 #about-horizontal-border-bottom {
@@ -67,16 +88,18 @@
   object-fit: cover;
 }
 
+#about-middle-div-left-side {
+  width: 50%;
+}
+
 #about-page-big-text-div {
-  font-size: 23px;
+  font-size: var(--large-font-size);
   padding-bottom: 20px;
   font-weight: 500;
-  width: 50%;
   border-bottom: 1px solid black;
 }
 
 #about-page-smaller-text-div {
-  font-size: 14px;
-  width: 50%;
+  font-size: var(--small-font-size);
   padding-top: 20px;
 }

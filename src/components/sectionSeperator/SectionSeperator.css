@@ -1,13 +1,15 @@
-#star-icon {
+.star-icon {
   width: 20px;
   margin-right: 20px;
 }
 
 .page-line {
   border-bottom: 1.5px black solid;
+  margin-bottom: 20px;
 }
 
 .additional-symbols {
+  height: 20px;
   display: flex;
   align-items: center;
   margin-bottom: 10px;

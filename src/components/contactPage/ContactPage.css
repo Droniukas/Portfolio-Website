@@ -1,25 +1,26 @@
 #contact-div {
-  height: 650px;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  min-height: 650px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 #contact-page-left-side-div {
+  flex: 1;
   margin-top: 60px;
-  font-size: 90px;
+  font-size: var(--largest-font-size);
   font-weight: 500;
 }
 
 #contact-page-right-side-div {
+  flex: 1;
   width: 600px;
-  height: 370px;
+  min-height: 370px;
   margin-top: 200px;
 }
 
 #contact-page-right-side-top-div {
-  font-size: 23px;
+  font-size: var(--large-font-size);
   padding-bottom: 50px;
   padding-right: 8%;
   font-weight: 500;
@@ -30,11 +31,12 @@
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contact-page-bolded-info {
   font-weight: 800;
-  font-size: 20px;
+  font-size: var(--medium-font-size);
 }
 
 #social-media-div {
@@ -48,4 +50,9 @@
 .social-media-link {
   text-decoration: none;
   color: black;
+}
+
+#social-media-div,
+#general-info-div {
+  margin-top: 50px;
 }

@@ -1,13 +1,13 @@
 #sidebar-div {
   position: fixed;
-  width: 100px;
+  width: var(--sidebar-width);
   left: 0;
   bottom: 20px;
   text-align: center;
 }
 
 .sidebar-img {
-  width: 30px;
+  width: var(--sidebar-img-width);
   margin-top: 5px;
   margin-bottom: 5px;
   cursor: pointer;

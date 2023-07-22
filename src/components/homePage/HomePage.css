@@ -3,7 +3,7 @@
   position: absolute;
   right: 100px;
   width: 200px;
-  box-shadow: 0.5px 0.5px 200px black;
+  box-shadow: 0.5px 0.5px 10px black;
   animation: rectangle-load 300ms ease-out;
   transform: rotate(45deg);
   border-radius: 2px;
@@ -20,25 +20,25 @@
 }
 
 body {
-  background-color: #eaeaea;
+  background-color: var(--main-background-color);
 }
 
 #home-div {
   margin-top: 100px;
   height: 700px;
-  background-color: #eaeaea;
+  background-color: var(--main-background-color);
 }
 
 #current-position {
-  font-size: 30px;
-  color: rgb(78, 78, 78);
+  font-size: var(--large-font-size);
+  color: var(--main-grey-color);
   display: flex;
   align-items: center;
   font-weight: 500;
 }
 
 #name {
-  font-size: 90px;
+  font-size: var(--largest-font-size);
   color: black;
   z-index: 2;
   font-weight: 500;
@@ -57,6 +57,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #home-page-expand-button-div {
@@ -64,7 +65,7 @@ body {
 }
 
 #home-page-all-bottom-items-div {
-  margin-top: 22%;
+  margin-top: 250px;
   margin-bottom: 45px;
 }
 
@@ -79,7 +80,7 @@ body {
 }
 
 #home-page-above-bottom-line-items-div {
-  font-size: 14px;
+  font-size: var(--small-font-size);
   display: flex;
 }
 

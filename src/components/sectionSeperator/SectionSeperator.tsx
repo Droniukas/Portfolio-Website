@@ -12,7 +12,7 @@ const SectionSeperator = (props: SectionSeperatorProps) => {
   return (
     <>
       <div className="additional-symbols">
-        {hasIcon !== false && <img src={starIconBlack} id="star-icon" />}
+        {hasIcon !== false && <img src={starIconBlack} className="star-icon" />}
         {name}
       </div>
       <div className="page-line" />

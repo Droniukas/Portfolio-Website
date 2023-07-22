@@ -35,10 +35,9 @@ const ExperiencePage = () => {
   ];
   return (
     <>
-      <div>
-        <SectionSeperator name="02. -- experience" />
+      <div id="experience-skills-div">
         <div id="experience-div">
-          <SkillsPage />
+          <SectionSeperator name="02. -- EXPERIENCE" />
           <div id="experience-grid">
             {experiences.map((experience) => {
               return (
@@ -50,7 +49,6 @@ const ExperiencePage = () => {
                   <div className="date-div">{experience.date}</div>
                   <div className="place-div">{experience.place}</div>
                   <div className="description-div">{experience.description}</div>
-
                   <div className="additional-info-div">
                     <img className="additional-info-img" src={additionalInfo} />
                   </div>
@@ -60,6 +58,7 @@ const ExperiencePage = () => {
             })}
           </div>
         </div>
+        <SkillsPage />
       </div>
     </>
   );

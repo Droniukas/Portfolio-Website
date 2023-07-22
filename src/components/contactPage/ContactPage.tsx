@@ -5,7 +5,7 @@ import './ContactPage.css';
 const ContactPage = () => {
   return (
     <>
-      <SectionSeperator name="03. -- contact" />
+      <SectionSeperator name="03. -- CONTACT" />
       <div id="contact-div">
         <div id="contact-page-left-side-div">Contact me</div>
         <div id="contact-page-right-side-div">

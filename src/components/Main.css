@@ -1,5 +1,33 @@
 #main-div {
-  margin: 70px;
-  margin-left: 100px;
-  margin-bottom: 0;
+  padding: 70px;
+  padding-top: 0px;
+  padding-left: var(--sidebar-width);
+  margin: auto;
+  max-width: 1500px;
+}
+
+:root {
+  --main-grey-color: rgb(78, 78, 78);
+  --main-background-color: #eaeaea;
+  --largest-font-size: 90px;
+  --large-font-size: 25px;
+  --medium-font-size: 20px;
+  --small-font-size: 15px;
+  --smallest-font-size: 11px;
+
+  --sidebar-img-width: 30px;
+  --sidebar-width: 100px;
+}
+
+@media all and (max-width: 500px) {
+  :root {
+    --largest-font-size: 50px;
+    --large-font-size: 20px;
+    --medium-font-size: 15px;
+    --small-font-size: 10px;
+    --smallest-font-size: 9px;
+
+    --sidebar-img-width: 20px;
+    --sidebar-width: 70px;
+  }
 }

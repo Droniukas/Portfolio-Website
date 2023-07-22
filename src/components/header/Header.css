@@ -1,7 +1,8 @@
 .header-button {
-  color: rgb(78, 78, 78);
-  background-color: white;
-  border: 1px rgb(78, 78, 78) solid;
+  color: black;
+  font-weight: 500;
+  background-color: WHITE;
+  border: 1px black solid;
   border-radius: 20px;
   padding: 10px;
   cursor: pointer;
@@ -19,6 +20,6 @@
 }
 .button-numbers {
   display: inline-block;
-  font-size: 11px;
-  color: #0bbb87;
+  font-size: var(--smallest-font-size);
+  font-weight: 400;
 }

@@ -1,13 +1,19 @@
 #skills-div {
+  flex: 40;
+}
+
+#skills-layout {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .skill-div {
+  flex-grow: 1;
   display: flex;
-  background-color: #d1d1d1;
-  width: 200px;
+  padding-right: 15px;
+  background-color: #d7d7d7;
+  width: fit-content;
   font-weight: 900;
   border-radius: 10px;
   align-items: center;
@@ -15,5 +21,10 @@
 
 .skill-img {
   width: 30px;
-  margin: 20px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.second-skill-img {
+  margin-left: 0;
 }
