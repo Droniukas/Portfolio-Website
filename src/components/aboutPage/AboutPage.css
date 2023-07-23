@@ -6,7 +6,7 @@
 }
 
 #about-div-photo {
-  flex: 6; /*this is supposed to be 3*/
+  flex: 6;
 }
 
 #about-div-text {
@@ -34,7 +34,7 @@
 
 #about-image-top-div {
   padding: 10px;
-  height: auto; /*this is supposed to be 530px*/
+  height: auto;
 }
 
 #about-horizontal-border-top {
@@ -43,18 +43,23 @@
   height: 0.5px;
   position: absolute;
   left: 0;
-  top: 50px; /*this is going to be 550px*/
+  top: 50px;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 650px) {
   #about-horizontal-border-top {
-    top: 550px;
+    top: 350px;
   }
   #about-image-top-div {
-    height: 530px;
+    height: 330px;
   }
-  #about-div-photo {
-    flex: 3;
+  #about-div-photo,
+  #about-div-end {
+    flex: 1.5;
+  }
+  .about-middle-div {
+    min-height: auto;
+    margin-bottom: 20px;
   }
 }
 
@@ -89,7 +94,7 @@
 }
 
 #about-middle-div-left-side {
-  width: 50%;
+  width: 100%;
 }
 
 #about-page-big-text-div {
