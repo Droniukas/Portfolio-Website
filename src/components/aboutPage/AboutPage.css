@@ -37,21 +37,29 @@
   height: auto;
 }
 
-#about-horizontal-border-top {
-  background-color: black;
-  width: 100%;
+.about-horizontal-border {
   height: 0.5px;
   position: absolute;
   left: 0;
+  background-color: black;
+  width: 100%;
+}
+
+#about-horizontal-border-top {
+  top: 50px;
+}
+
+#about-horizontal-border-second-top {
   top: 50px;
 }
 
 @media all and (max-width: 650px) {
   #about-horizontal-border-top {
-    top: 350px;
+    top: 400px;
   }
   #about-image-top-div {
     height: 330px;
+    margin-top: 50px;
   }
   #about-div-photo,
   #about-div-end {
@@ -64,11 +72,7 @@
 }
 
 #about-horizontal-border-bottom {
-  background-color: black;
   width: 70%;
-  height: 0.5px;
-  position: absolute;
-  left: 0;
   bottom: 50px;
 }
 

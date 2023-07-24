@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import profilePhoto from './resources/images/profile-photo.jpg';
 import './AboutPage.css';
@@ -37,7 +37,7 @@ const AboutPage = () => {
         <div id="about-div-photo">
           <div className="about-top-div" />
           <div className="about-middle-div" id="about-image-div">
-            {windowSize.width > 650 && <img src={profilePhoto} id="about-image" />}
+            {windowSize.width >= 650 && <img src={profilePhoto} id="about-image" />}
           </div>
           <div className="about-bottom-div" />
         </div>
@@ -48,7 +48,7 @@ const AboutPage = () => {
           </div>
           <div className="about-middle-div">
             <div id="about-middle-div-left-side" style={{ width: `${middleDivLeftSideWidth}%` }}>
-              <div id="about-page-big-text-div">A journey as an ambitious full-stack web developer</div>
+              <div id="about-page-big-text-div">My journey as an ambitious full-stack web developer</div>
               <div id="about-page-smaller-text-div">
                 For the past few years I have been loving programming, from designing to creating the brains/algorythms
                 of software and I enjoy building interesting projects. Curtesy of programming I have met a lot of great
@@ -63,8 +63,9 @@ const AboutPage = () => {
           <div className="about-top-div" />
           <div className="about-middle-div" />
         </div>
-        <div id="about-horizontal-border-bottom" />
-        <div id="about-horizontal-border-top" />
+        <div id="about-horizontal-border-bottom" className="about-horizontal-border" />
+        <div id="about-horizontal-border-top" className="about-horizontal-border" />
+        {windowSize.width < 650 && <div id="about-horizontal-border-second-top" className="about-horizontal-border" />}
       </div>
     </>
   );
