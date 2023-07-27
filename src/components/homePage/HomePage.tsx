@@ -2,12 +2,38 @@ import React from 'react';
 import './HomePage.css';
 import starIcon from './star-icon.png';
 import minus from './minus.png';
+import * as THREE from 'three';
+
+import { Canvas } from '@react-three/fiber';
+import TemporaryBox from './TemporaryBox';
 
 const Home = () => {
+  // const scene = new THREE.Scene();
+
+  // const geometry = new THREE.SphereGeometry(3, 64, 64);
+  // const material = new THREE.MeshStandardMaterial({
+  //   color: '#0bbb87',
+  // });
+
+  // const mesh = new THREE.Mesh(geometry, material);
+  // scene.add(mesh);
+
+  // const camera = new THREE.PerspectiveCamera(45, 800, 600);
+  // scene.add(camera);
+
+  // const canvas = document.querySelector('.webgl') as HTMLCanvasElement;
+  // const renderer = new THREE.WebGLRenderer({ canvas });
+  // renderer.setSize(800, 600);
+  // renderer.render(scene, camera);
   return (
     <>
       <div id="home-div">
-        <div id="backround-rectangle" />
+        <div id="backround-rectangle">
+          <Canvas>
+            <TemporaryBox />
+          </Canvas>
+        </div>
+
         <div style={{ color: '#0bbb87' }}>Hi, my name is</div>
         <div id="name">Domas Raila</div>
         <div id="current-position">Junior software-developer</div>

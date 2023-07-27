@@ -1,0 +1,15 @@
+.experience-modal-bottom-button-left-top {
+  display: flex;
+  column-gap: 5px;
+}
+
+.experience-modal-bottom-button-left-icon,
+.experience-modal-bottom-button-right-icon {
+  width: 25px;
+}
+
+.experience-modal-bottom-button-bottom-text {
+  font-size: var(--smallest-font-size);
+  color: var(--main-grey-color);
+  font-weight: 500;
+}

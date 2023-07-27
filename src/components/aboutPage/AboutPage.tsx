@@ -50,10 +50,10 @@ const AboutPage = () => {
             <div id="about-middle-div-left-side" style={{ width: `${middleDivLeftSideWidth}%` }}>
               <div id="about-page-big-text-div">My journey as an ambitious full-stack web developer</div>
               <div id="about-page-smaller-text-div">
-                For the past few years I have been loving programming, from designing to creating the brains/algorythms
-                of software and I enjoy building interesting projects. Curtesy of programming I have met a lot of great
-                people and succesfuly overcame many interesting and unique challenges, with that said I am eager to
-                continue this journey! Currently I am looking for a new position as a full-stack web developer{';)'}
+                For the past few years I{"'"}ve been loving programming, from designing to creating the
+                brains/algorythms of software. Curtesy of programming I have met a lot of great people and have
+                succesfuly overcame many interesting and unique challenges, with that said I am eager to continue this
+                journey! Currently I am looking for a new position as a full-stack web developer{';)'}
               </div>
             </div>
           </div>

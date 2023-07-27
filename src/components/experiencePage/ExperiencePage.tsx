@@ -5,10 +5,9 @@ import experience3 from './resources/images/experience-3.jpg';
 import additionalInfo from './resources/images/additional-info.png';
 import { Experience } from '../../interfaces/Experience.interface';
 import './ExperiencePage.css';
-import './ModalExperiencePage.css';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import SkillsPage from '../skillsPage/SkillsPage';
-import ModalExperiencePage from './ModalExperiencePage';
+import ModalExperiencePage from './ModalExperiencePage/ModalExperiencePage';
 
 const ExperiencePage = () => {
   const experiences: Experience[] = [
@@ -58,7 +57,22 @@ const ExperiencePage = () => {
           ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
           ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
           ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
+          '  @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
+          ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
+          ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
+          ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
+          ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
+          ' @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge' +
           '  @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge @Devbridge',
+
+        leftBottomButton: {
+          name: 'Something',
+          smallerText: 'More',
+        },
+        rightBottomButton: {
+          name: 'Something',
+          smallerText: 'More',
+        },
       },
     },
   ];

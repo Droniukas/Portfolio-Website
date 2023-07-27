@@ -1,15 +1,13 @@
 #backround-rectangle {
-  height: 200px;
   position: absolute;
   right: 100px;
   width: 200px;
   box-shadow: 0.5px 0.5px 10px black;
-  animation: rectangle-load 300ms ease-out;
-  transform: rotate(45deg);
   border-radius: 2px;
   border: 1px solid black;
+  /* animation: rectangle-load 300ms ease-out; */
 }
-
+/* 
 @keyframes rectangle-load {
   0% {
     transform: rotate(-45deg);
@@ -17,7 +15,7 @@
   100% {
     transform: rotate(45deg);
   }
-}
+} */
 
 body {
   background-color: var(--main-background-color);
