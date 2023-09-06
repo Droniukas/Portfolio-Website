@@ -29,23 +29,15 @@ const ContactPage = () => {
               <div className="contact-page-bolded-info" id="social-media-title">
                 SOCIAL MEDIA
               </div>
-
               <div className="contact-info-child-div">
                 <SocialMediaLink
-                  linkHref={'https://www.facebook.com/profile.php?id=100008456045198'}
-                  linkName={'Facebook'}
+                  linkHref={'https://www.linkedin.com/in/domas-raila-54294b180/'}
+                  linkName={'LinkedIn'}
                 />
-
-                <div className="social-media-link-div">
-                  <a href="" className="social-media-link">
-                    LinkedIn <br />
-                  </a>
-                </div>
-                <div className="social-media-link-div">
-                  <a href="" className="social-media-link">
-                    Github
-                  </a>
-                </div>
+                <SocialMediaLink
+                  linkHref={'https://github.com/Droniukas'}
+                  linkName={'GitHub'}
+                />
               </div>
             </div>
           </div>

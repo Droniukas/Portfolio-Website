@@ -47,16 +47,7 @@
   margin-top: 50px;
 }
 
-.social-media-link {
-  text-decoration: none;
-  color: black;
-}
-
 #social-media-div,
 #general-info-div {
   margin-top: 50px;
-}
-.social-media-link-div {
-  margin-bottom: 5px;
-  width: min-content;
 }

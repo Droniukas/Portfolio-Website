@@ -1,0 +1,9 @@
+.social-media-link-div {
+  margin-bottom: 5px;
+  width: min-content;
+}
+
+.social-media-link {
+  text-decoration: none;
+  color: black;
+}
