@@ -1,30 +1,14 @@
-#backround-rectangle {
+#background-rectangle {
   position: absolute;
   right: 100px;
-  width: 200px;
-  box-shadow: 0.5px 0.5px 10px black;
   border-radius: 2px;
-  border: 1px solid black;
   /* animation: rectangle-load 300ms ease-out; */
-}
-/* 
-@keyframes rectangle-load {
-  0% {
-    transform: rotate(-45deg);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-} */
-
-body {
-  background-color: var(--main-background-color);
+  z-index: -1;
 }
 
 #home-div {
   margin-top: 100px;
   min-height: 700px;
-  background-color: var(--main-background-color);
 }
 
 #current-position {
@@ -68,11 +52,15 @@ body {
 }
 
 .expand-button {
+  /* new addition */
+  background: var(--main-backdrop-color);
+  backdrop-filter: blur(20px) saturate(1.7);
+  /* new addition */
+
   width: 100%;
   height: 50px;
   border-radius: 50% / 50% 50% 50% 50%;
   border: 1px solid black;
-  background-color: transparent;
   cursor: pointer;
   font-weight: 500;
   font-size: var(--small-font-size);

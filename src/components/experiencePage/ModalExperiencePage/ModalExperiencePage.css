@@ -15,6 +15,10 @@
   height: 80%;
 }
 
+.experience-modal-div:focus {
+  outline: none;
+}
+
 @media all and (min-width: 750px) {
   .experience-modal-div {
     width: auto;
@@ -32,10 +36,27 @@
 
 .experience-modal-top-part-div {
   display: flex;
-  /* maybe you could wrap this for responsiveness */
   gap: 15px;
+  max-height: 27vh;
+}
+
+.experience-modal-bottom-part-div {
+  padding-top: 30px;
+  display: flex;
+  gap: 15px;
+  position: relative;
   flex-grow: 2;
-  max-height: 220px;
+  max-height: 40vh;
+}
+
+@media all and (max-width: 530px) {
+  .experience-modal-bottom-part-div {
+    max-height: none;
+    flex-direction: column;
+  }
+  .modal-right-side {
+    width: auto;
+  }
 }
 
 .experience-modal-image {
@@ -67,20 +88,6 @@
 
 .experience-modal-date-and-place-div {
   font-size: var(--smallest-font-size);
-  bottom: 15px;
-}
-
-/* fdbvfksdblfisdkvsdkucfsm */
-/* fdbvfksdblfisdkvsdkucfsm */
-/* fdbvfksdblfisdkvsdkucfsm */
-
-.experience-modal-bottom-part-div {
-  padding-top: 30px;
-  display: flex;
-  /* maybe you could wrap this for responsiveness */
-  gap: 15px;
-  position: relative;
-  flex-grow: 2;
 }
 
 .experience-modal-bottom-part-left-div {

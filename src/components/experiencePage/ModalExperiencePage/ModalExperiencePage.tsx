@@ -23,7 +23,6 @@ const ModalExperiencePage = (props: ModalExperiencePageProps) => {
     >
       <div className="experience-modal-div">
         <CloseButton setOpen={setOpen} />
-
         <div className="experience-modal-top-part-div">
           <div className="experience-modal-top-part-left-div modal-left-side">
             <div className="experience-modal-category-header-div">EXPERIENCE</div>
@@ -38,7 +37,9 @@ const ModalExperiencePage = (props: ModalExperiencePageProps) => {
           </div>
         </div>
         <div className="experience-modal-bottom-part-div">
-          <div className="experience-modal-bottom-part-left-div modal-left-side">In-depth overview</div>
+          <div className="experience-modal-bottom-part-left-div modal-left-side">
+            In-depth overview -
+          </div>
           <div className="experience-modal-bottom-part-right-div modal-right-side">
             {experience.modal.longerDescription}
           </div>

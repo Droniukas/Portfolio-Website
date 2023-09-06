@@ -9,10 +9,13 @@
 }
 
 .skill-div {
+  /* new addition */
+  background: var(--main-backdrop-color);
+  backdrop-filter: blur(20px) saturate(1.7);
+  /* new addition */
   flex-grow: 1;
   display: flex;
   padding-right: 15px;
-  background-color: #d7d7d7;
   width: fit-content;
   font-weight: 900;
   border-radius: 10px;

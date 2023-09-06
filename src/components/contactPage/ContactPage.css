@@ -56,3 +56,7 @@
 #general-info-div {
   margin-top: 50px;
 }
+.social-media-link-div {
+  margin-bottom: 5px;
+  width: min-content;
+}

@@ -8,7 +8,7 @@ const Header = (): JSX.Element => {
       <div id="header-div">
         <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
           <button className="header-button home">
-            <div className="button-numbers">00. </div>HOME
+            <div className="button-numbers"></div>HOME
           </button>
         </Link>
         <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
