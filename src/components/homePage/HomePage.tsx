@@ -4,7 +4,7 @@ import starIcon from './star-icon.png';
 import minus from './minus.png';
 
 import { Canvas } from '@react-three/fiber';
-import TemporaryBox from './TemporaryBox';
+import AbstractSphere from './AbstractSphere';
 import { PerspectiveCamera } from '@react-three/drei';
 import { ACESFilmicToneMapping } from 'three';
 
@@ -16,9 +16,9 @@ const Home = () => {
           <Canvas gl={{ toneMapping: ACESFilmicToneMapping }}>
             {/*just in case you can define tone mapping and other general settings/properties of the scene here*/}
             <ambientLight intensity={0.5} />
-            <pointLight position={[10, 10, 10]} intensity={1.9} />
+            <directionalLight position={[10, 10, 10]} intensity={1.9} />
             <PerspectiveCamera makeDefault fov={50} position={[0, 0, 5]} />
-            <TemporaryBox />
+            <AbstractSphere />
           </Canvas>
         </div>
         <div style={{ color: '#0bbb87' }}>Hi, my name is</div>

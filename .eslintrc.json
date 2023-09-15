@@ -17,5 +17,6 @@
   "plugins": ["react"],
   "rules": {
     "react/no-unknown-property": ["off", { "ignore": ["JSX"] }]
-  }
+  },
+  "ignorePatterns": ["craco.config.js"]
 }
