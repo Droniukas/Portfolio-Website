@@ -1,13 +1,16 @@
 import React, { useRef } from 'react';
+import useFadeIn from '../../hooks/useFadeIn';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import './ContactPage.css';
 import SocialMediaLink from './socialMediaLink/SocialMediaLink';
 
 const ContactPage = () => {
+  const contactRef = useRef(null);
+  useFadeIn(contactRef);
   return (
     <>
       <SectionSeperator name="03. -- CONTACT" />
-      <div id="contact-div">
+      <div id="contact-div" ref={contactRef}>
         <div id="contact-page-left-side-div">Contact me</div>
         <div id="contact-page-right-side-div">
           <div id="contact-page-right-side-top-div">

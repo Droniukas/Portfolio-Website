@@ -1,9 +1,18 @@
-// const path = require('path');
-
-// module.exports = {
-//   webpack: {
-//     alias: {
-//       ""
-//     }
-//   }
-// }
+module.exports = {
+  webpack: {
+    alias: {},
+    plugins: [],
+    mode: 'extends',
+    configure: {
+      module: {
+        rules: [
+          {
+            /* based on https://webpack.js.org/guides/asset-modules/#source-assets */
+            test: /\.glsl$/,
+            type: 'asset/source',
+          },
+        ],
+      },
+    },
+  },
+};

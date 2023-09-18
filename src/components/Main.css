@@ -42,8 +42,8 @@ body::after {
 body::before {
   background: var(--third-glow);
   border-radius: 50%;
-  width: 40vw;
-  height: 40vw;
+  width: 25vw;
+  height: 25vw;
   margin-left: -200px;
   filter: blur(150px);
   top: calc(50vh - 50vw / 2);
@@ -54,8 +54,8 @@ body::before {
 body::after {
   background: var(--secondary-glow);
   border-radius: 50%;
-  width: 40vw;
-  height: 60vh;
+  width: 25vw;
+  height: 35vh;
   filter: blur(150px);
   top: calc(50vh - 50vw / 2);
   left: calc(50vw - 50vw / 2);

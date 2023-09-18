@@ -1,4 +1,4 @@
-.header-button {
+.fixed-button {
   color: black;
   font-weight: 500;
   background-color: transparent;
@@ -10,7 +10,7 @@
   backdrop-filter: blur(20px) saturate(1.7);
 }
 
-#header-div {
+#fixed-buttons-div {
   display: flex;
   gap: 10px;
   position: fixed;
@@ -19,7 +19,16 @@
   height: 50px;
   align-items: center;
   z-index: 10;
+  transform-origin: left bottom;
 }
+
+/* after animation */
+/* #fixed-buttons-div {
+  transform: rotateZ(-90deg);
+  top: 450px;
+  left: 100px;
+  height: 100px;
+} */
 
 .button-numbers {
   display: inline-block;

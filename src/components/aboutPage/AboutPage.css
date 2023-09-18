@@ -30,11 +30,22 @@
 
 #about-image-div {
   height: 530px;
+  position: relative;
 }
 
 #about-image-top-div {
   padding: 10px;
   height: auto;
+}
+
+#about-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px);
+  width: calc(100% - 20px);
+  margin: 10px;
+  background-color: inherit;
 }
 
 .about-horizontal-border {

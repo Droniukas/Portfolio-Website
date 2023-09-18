@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './HomePage.css';
 import starIcon from './star-icon.png';
 import minus from './minus.png';
 
-import { Canvas } from '@react-three/fiber';
-import AbstractSphere from './AbstractSphere';
-import { PerspectiveCamera } from '@react-three/drei';
-import { ACESFilmicToneMapping } from 'three';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import CanvasElements from './CanvasElements';
 
 const Home = () => {
+  useEffect(() => {
+    console.log();
+  }, []);
+
   return (
     <>
       <div id="home-div">
         <div id="background-rectangle">
-          <Canvas gl={{ toneMapping: ACESFilmicToneMapping }}>
-            {/*just in case you can define tone mapping and other general settings/properties of the scene here*/}
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[10, 10, 10]} intensity={1.9} />
-            <PerspectiveCamera makeDefault fov={50} position={[0, 0, 5]} />
-            <AbstractSphere />
+          <Canvas>
+            <CanvasElements />
           </Canvas>
         </div>
-        <div style={{ color: '#0bbb87' }}>Hi, my name is</div>
+        <div style={{}} id="greetings-text-div">
+          Hi, my name is
+        </div>
         <div id="name">Domas Raila</div>
         <div id="current-position">Junior software-developer</div>
         <div id="home-page-all-bottom-items-div">
