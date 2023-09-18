@@ -7,7 +7,7 @@ const CanvasElements = () => {
     <>
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 10]} intensity={1.9} />
-      <PerspectiveCamera makeDefault fov={10} position={[0, 0.4, 6.5]} />
+      <PerspectiveCamera makeDefault fov={50} position={[0, 0.4, 6.5]} />
       <AbstractSphere />
     </>
   );

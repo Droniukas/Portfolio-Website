@@ -46,10 +46,6 @@ const AbstractSphere = () => {
       };
     }
 
-    // gsap.to(ref.current.position, {
-    //   y: -0.5,
-    // });
-
     const handleMouseMove = (event: MouseEvent) => {
       setMouseXPercentage((event.clientX / innerWidth) * 2 - 1);
       setMouseYPercentage((event.clientY / innerHeight) * 2 + 1);
@@ -103,7 +99,7 @@ const AbstractSphere = () => {
 
   return (
     // <Float>
-    <mesh ref={ref} position={[3.4, 2, -35]}>
+    <mesh ref={ref}>
       <icosahedronGeometry args={[2, 50]} />
       <shaderMaterial
         ref={shaderMaterialRef}

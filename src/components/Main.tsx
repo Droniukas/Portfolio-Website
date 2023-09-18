@@ -6,7 +6,8 @@ import AboutPage from './aboutPage/AboutPage';
 import ContactPage from './contactPage/ContactPage';
 import gsap from 'gsap';
 import { MathUtils } from 'three';
-import { useFrame } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
+import CanvasElements from './homePage/CanvasElements';
 
 const Main = () => {
   const [mouseXpercentage, setMouseXPercentage] = useState(0);
@@ -56,6 +57,11 @@ const Main = () => {
         <AboutPage />
         <ExperiencePage />
         <ContactPage />
+        <div id="background-rectangle">
+          <Canvas>
+            <CanvasElements />
+          </Canvas>
+        </div>
       </div>
     </>
   );

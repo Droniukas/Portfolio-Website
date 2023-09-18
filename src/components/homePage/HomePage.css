@@ -1,21 +1,21 @@
-/* #background-rectangle {
+#background-rectangle {
   position: absolute;
   right: 100px;
   top: -50px;
   border-radius: 2px;
   z-index: -1;
-} */
+  height: 400px;
+}
 
-#background-rectangle {
+/* #background-rectangle {
   position: fixed;
-  /* right: 100px; */
-  /* top: -50px; */
   width: 100vw;
   height: 100vh;
   border-radius: 2px;
-  /* animation: rectangle-load 300ms ease-out; */
   z-index: -1;
-}
+  left: 0;
+  top: 0;
+} */
 
 #home-div {
   margin-top: 100px;
