@@ -14,7 +14,8 @@ void main() {
 
   vec2 fakeUv = vec2((angle + PI) / (2. * PI), phi / PI);
 
-  float fresnel = dot(normalize(cameraPosition - vPosition), normalize(vNormal));
+  // float fresnel = dot(normalize(cameraPosition - vPosition), normalize(vNormal));
+  // float fresnel = abs(dot(normalize(cameraPosition - vPosition), normalize(vNormal)));
   // fresnel = fresnel * fresnel;
   vec4 texture = texture2D(uSky, fakeUv / 3. + vDisplacement);
 

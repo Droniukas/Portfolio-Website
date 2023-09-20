@@ -5,23 +5,23 @@ import minus from './minus.png';
 
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import CanvasElements from './CanvasElements';
+import useFadeIn from '../../hooks/useFadeIn';
 
 const Home = () => {
-  useEffect(() => {
-    console.log();
-  }, []);
+  const homeRef = useRef();
+  useFadeIn(homeRef, {
+    toogleActions: 'complete complete restart complete',
+  });
 
   return (
     <>
-      <div id="home-div">
+      <div id="home-div" ref={homeRef}>
         <div id="background-rectangle">
           <Canvas>
             <CanvasElements />
           </Canvas>
         </div>
-        <div style={{}} id="greetings-text-div">
-          Hi, my name is
-        </div>
+        <div id="greetings-text-div">Hi, my name is</div>
         <div id="name">Domas Raila</div>
         <div id="current-position">Junior software-developer</div>
         <div id="home-page-all-bottom-items-div">

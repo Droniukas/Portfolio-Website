@@ -6,11 +6,23 @@ import Main from './components/Main';
 import Sidebar from './components/sidebar/Sidebar';
 
 function App(): JSX.Element {
+  const [pageIsLoading, setPageIsLoading] = useState(true);
+  useEffect(() => {
+    window.onload = () => {
+      setPageIsLoading(false);
+    };
+  });
   return (
     <>
-      <Header />
-      <Sidebar />
-      <Main />
+      {pageIsLoading ? (
+        <div>loading</div>
+      ) : (
+        <>
+          <Header />
+          <Sidebar />
+          <Main />
+        </>
+      )}
     </>
   );
 }

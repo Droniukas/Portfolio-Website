@@ -1,26 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-const useFadeIn = (elementToAnimateRef: React.MutableRefObject<HTMLElement | null>) => {
-  const elementToAnimate = elementToAnimateRef.current;
-  useEffect(() => {
+type useFadeInProps = {
+  toogleActions?: string;
+};
+
+const useFadeIn = (
+  elementToAnimateRef: React.MutableRefObject<HTMLElement | null>,
+  props?: useFadeInProps,
+) => {
+  const { toogleActions } = props ?? {};
+
+  useLayoutEffect(() => {
+    const elementToAnimate = elementToAnimateRef.current;
+
     if (elementToAnimate) {
-      gsap.fromTo(
-        elementToAnimate,
-        { opacity: 0 },
-        {
-          duration: 1,
-          opacity: 1,
+      const context = gsap.context(() => {
+        gsap.from(elementToAnimate, {
+          duration: 0.55,
+          translateY: 70,
+          opacity: 0,
+          ease: 'power.out',
           scrollTrigger: {
             trigger: elementToAnimate,
-            once: false,
+            toggleActions: toogleActions
+              ? toogleActions
+              : 'restart reverse restart reverse',
+            start: 'top 90%',
+            end: 'bottom 10%',
           },
-        },
-      );
+        });
+      });
+
+      return () => context.revert();
     }
-  }, [elementToAnimate]);
+  }, []);
 };
 
 export default useFadeIn;

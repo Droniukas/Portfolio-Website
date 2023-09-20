@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import profilePhoto from './resources/images/profile-photo.jpg';
 import './AboutPage.css';
@@ -8,6 +8,9 @@ import useFadeIn from '../../hooks/useFadeIn';
 
 const AboutPage = () => {
   const aboutRef = useRef(null);
+  const horizontalBorderBottomRef = useRef(null);
+  const verticalBorderRightRef = useRef(null);
+
   const [windowSize, setWindowSize] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -18,11 +21,6 @@ const AboutPage = () => {
   );
 
   useEffect(() => {
-    gsap.to('#about-image-overlay', {
-      width: '0%',
-      ease: 'power2.out',
-    });
-
     const handleWindowResize = () => {
       setWindowSize({
         height: window.innerHeight,
@@ -38,6 +36,38 @@ const AboutPage = () => {
     };
   }, []);
 
+  useLayoutEffect(() => {
+    const horizontalBorderToAnimate = horizontalBorderBottomRef.current;
+    const verticalBorderToAnimate = verticalBorderRightRef.current;
+
+    if (horizontalBorderToAnimate && verticalBorderToAnimate) {
+      const customToggleActions = 'restart reverse restart reverse';
+      const context = gsap.context(() => {
+        gsap.from(horizontalBorderToAnimate, {
+          duration: 0.55,
+          ease: 'power.out',
+          width: '100%',
+          scrollTrigger: {
+            markers: true,
+            trigger: horizontalBorderToAnimate,
+            toggleActions: customToggleActions,
+          },
+        });
+
+        gsap.from(verticalBorderToAnimate, {
+          duration: 0.55,
+          ease: 'power.out',
+          height: '100%',
+          scrollTrigger: {
+            trigger: horizontalBorderToAnimate,
+            toggleActions: customToggleActions,
+          },
+        });
+      });
+      return () => context.revert();
+    }
+  }, []);
+
   useFadeIn(aboutRef);
 
   return (
@@ -47,12 +77,7 @@ const AboutPage = () => {
         <div id="about-div-photo">
           <div className="about-top-div" />
           <div className="about-middle-div" id="about-image-div">
-            {windowSize.width >= 650 && (
-              <>
-                <img src={profilePhoto} id="about-image" />
-                <div id="about-image-overlay" />
-              </>
-            )}
+            {windowSize.width >= 650 && <img src={profilePhoto} id="about-image" />}
           </div>
           <div className="about-bottom-div" />
         </div>
@@ -83,12 +108,20 @@ const AboutPage = () => {
           </div>
         </div>
         <div id="about-div-end">
-          <div className="about-vertical-border" id="about-vertical-border-right" />
+          <div
+            className="about-vertical-border"
+            id="about-vertical-border-right"
+            ref={verticalBorderRightRef}
+          />
           <div className="about-top-div" />
           <div className="about-middle-div" />
         </div>
-        <div id="about-horizontal-border-bottom" className="about-horizontal-border" />
         <div id="about-horizontal-border-top" className="about-horizontal-border" />
+        <div
+          id="about-horizontal-border-bottom"
+          className="about-horizontal-border"
+          ref={horizontalBorderBottomRef}
+        />
         {windowSize.width < 650 && (
           <div
             id="about-horizontal-border-second-top"
