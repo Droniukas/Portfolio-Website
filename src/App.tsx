@@ -11,11 +11,11 @@ function App(): JSX.Element {
     window.onload = () => {
       setPageIsLoading(false);
     };
-  });
+  }, []);
   return (
     <>
       {pageIsLoading ? (
-        <div>loading</div>
+        <div>LOADING</div>
       ) : (
         <>
           <Header />

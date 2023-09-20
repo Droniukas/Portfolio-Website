@@ -6,6 +6,7 @@ import minus from './minus.png';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import CanvasElements from './CanvasElements';
 import useFadeIn from '../../hooks/useFadeIn';
+import { Loader } from '@react-three/drei';
 
 const Home = () => {
   const homeRef = useRef();

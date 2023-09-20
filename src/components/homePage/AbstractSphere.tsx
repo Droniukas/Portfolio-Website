@@ -40,6 +40,7 @@ const AbstractSphere = () => {
   });
 
   useEffect(() => {
+    console.log('stoped loading');
     if (shaderMaterialRef.current) {
       shaderMaterialRef.current.uniforms.uSky = {
         value: new THREE.TextureLoader().load(sky),
@@ -58,45 +59,6 @@ const AbstractSphere = () => {
     };
   }, []);
 
-  // const onBeforeCompile = (shader: Shader) => {
-  //   console.log(shader.fragmentShader);
-  //   console.log(shader.vertexShader);
-  //   (ref.current.material as MeshPhysicalMaterial).userData.shader = shader;
-  //   shader.uniforms.uTime = { value: 0 };
-  //   shader.uniforms.uSky = { value: new THREE.TextureLoader().load(sky) };
-
-  //   const vertexToReplacePars = /* glsl */ `#include <displacementmap_pars_vertex>`;
-  //   shader.vertexShader = shader.vertexShader.replace(
-  //     vertexToReplacePars,
-  //     vertexToReplacePars + vertexPars,
-  //   );
-
-  //   const vertexToReplaceMain = /* glsl */ `#include <displacementmap_vertex>`;
-
-  //   shader.vertexShader = shader.vertexShader.replace(
-  //     vertexToReplaceMain,
-  //     vertexToReplaceMain + vertexMain,
-  //   );
-
-  //   const fragmentToReplacePars = /* glsl */ `#include <bumpmap_pars_fragment>`;
-  //   shader.fragmentShader = shader.fragmentShader.replace(
-  //     fragmentToReplacePars,
-  //     fragmentToReplacePars + fragmentPars,
-  //   );
-
-  //   const fragmentToReplaceMain = /* glsl */ `#include <normal_fragment_maps>`;
-  //   shader.fragmentShader = shader.fragmentShader.replace(
-  //     fragmentToReplaceMain,
-  //     fragmentToReplaceMain + fragmentMain,
-  //   );
-
-  //   const fragmentToReplaceColor = /*glsl*/ `#include <color_fragment>`;
-  //   shader.fragmentShader = shader.fragmentShader.replace(
-  //     fragmentToReplaceColor,
-  //     fragmentToReplaceColor + fragmentColor,
-  //   );
-  // };
-
   return (
     // <Float>
     <mesh ref={ref}>
@@ -112,27 +74,3 @@ const AbstractSphere = () => {
 };
 
 export default AbstractSphere;
-
-// {
-/* <mesh receiveShadow castShadow ref={ref}>
-<icosahedronGeometry args={[2, 200]} />
-<MeshTransmissionMaterial
-  onBeforeCompile={onBeforeCompile}
-  distortionScale={0}
-  temporalDistortion={0}
-  backside
-  backsideThickness={5}
-  thickness={2}
-/>
-</mesh> */
-// }
-
-// onBeforeCompile={onBeforeCompile}
-// color="0xffffff"
-// transmission={1}
-// opacity={1}
-// metalness={0}
-// roughness={0}
-// ior={1.52}
-// thickness={0.1}
-// side={THREE.DoubleSide}
