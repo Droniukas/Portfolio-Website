@@ -1,25 +1,22 @@
-#background-rectangle {
+#background-model {
   position: absolute;
-  right: 100px;
-  top: -50px;
-  border-radius: 2px;
+  right: 0px;
+  top: -100px;
   z-index: -1;
   height: 400px;
+  width: 35%;
 }
 
-/* #background-rectangle {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  border-radius: 2px;
-  z-index: -1;
-  left: 0;
-  top: 0;
-} */
+:root {
+  --margin-top: 100px;
+}
 
-#home-div {
-  margin-top: 100px;
-  min-height: 700px;
+#home-div-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--margin-top);
+  min-height: calc(100vh - var(--margin-top));
 }
 
 #current-position {
@@ -47,9 +44,22 @@
   width: 35%;
 }
 
+.text-inhanced {
+  background-color: var(--main-blue-color);
+  background-image: linear-gradient(
+    45deg,
+    var(--main-blue-color) 22%,
+    var(--main-green-color) 67%,
+    #24a2c5 40%,
+    rgba(64, 223, 163, 0)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #greetings-text-div {
   background-color: var(--main-blue-color);
-  color: #0bbb87;
   width: max-content;
   background-image: linear-gradient(
     45deg,
@@ -94,6 +104,7 @@
 }
 
 .expand-button {
+  font-kerning: none;
   background: var(--main-backdrop-color);
   backdrop-filter: blur(20px) saturate(1.7);
 

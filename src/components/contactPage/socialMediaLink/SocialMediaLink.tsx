@@ -1,5 +1,5 @@
 import React, { MutableRefObject, useRef } from 'react';
-import gsap from 'gsap';
+import { gsap } from '../../../config/gsap';
 import './SocialMediaLink.css';
 
 type SocialMediaLinkProps = {

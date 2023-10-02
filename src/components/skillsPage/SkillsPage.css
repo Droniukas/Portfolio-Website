@@ -1,5 +1,6 @@
 #skills-div {
   flex: 40;
+  margin-bottom: var(--section-margin-bottom);
 }
 
 #skills-layout {

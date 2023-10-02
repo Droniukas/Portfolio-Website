@@ -1,6 +1,7 @@
 #main-div {
   padding: 70px;
   padding-top: 0px;
+  padding-bottom: 0px;
   padding-left: var(--sidebar-width);
   margin: auto;
   max-width: 1500px;
@@ -109,6 +110,8 @@ body::after {
   --sidebar-img-width: 30px;
   --sidebar-width: 100px;
 
+  --section-margin-bottom: 45px;
+
   /* gradients */
   /* ----------------------- */
   --main-green-color: #0bbb87;
@@ -153,4 +156,9 @@ body::after {
   width: 1500px;
   left: -300px;
   z-index: -1;
+}
+
+.main-sections {
+  min-height: calc(100vh - var(--section-margin-bottom));
+  margin-bottom: var(--section-margin-bottom);
 }

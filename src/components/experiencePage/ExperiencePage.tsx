@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 
 import additionalInfo from './resources/images/additional-info.png';
 import './ExperiencePage.css';
@@ -6,15 +6,29 @@ import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import SkillsPage from '../skillsPage/SkillsPage';
 import ModalExperiencePage from './ModalExperiencePage/ModalExperiencePage';
 import { experiences } from './resources/data/Experiences';
-import useFadeIn from '../../hooks/useFadeIn';
+import { gsap } from '../../config/gsap';
 
 const ExperiencePage = () => {
   const experienceRef = useRef(null);
-  useFadeIn(experienceRef);
+
+  useLayoutEffect(() => {
+    const experiencePageToAnimate = experienceRef.current;
+
+    const context = gsap.context(() => {
+      if (experiencePageToAnimate) {
+        gsap.effects.mainRevealEffect(experiencePageToAnimate, {
+          elementToAnimate: experiencePageToAnimate,
+        });
+      }
+    });
+
+    return () => context.revert();
+  }, []);
+
   return (
     <>
       <div id="experience-skills-div">
-        <div id="experience-div">
+        <div id="experience-div" className="main-sections">
           <SectionSeperator name="02. -- EXPERIENCE" />
           <div id="experience-grid" ref={experienceRef}>
             {experiences.map((experience) => {

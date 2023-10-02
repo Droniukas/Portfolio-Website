@@ -1,5 +1,5 @@
 #contact-div {
-  min-height: 650px;
+  min-height: calc(100vh - (70px + var(--section-margin-bottom)));
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

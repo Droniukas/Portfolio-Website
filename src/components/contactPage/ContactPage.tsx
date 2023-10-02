@@ -1,16 +1,30 @@
-import React, { useRef } from 'react';
-import useFadeIn from '../../hooks/useFadeIn';
+import React, { useLayoutEffect, useRef } from 'react';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import './ContactPage.css';
 import SocialMediaLink from './socialMediaLink/SocialMediaLink';
+import { gsap } from '../../config/gsap';
 
 const ContactPage = () => {
   const contactRef = useRef(null);
-  useFadeIn(contactRef);
+
+  useLayoutEffect(() => {
+    const contactPageToAnimate = contactRef.current;
+
+    const context = gsap.context(() => {
+      if (contactPageToAnimate) {
+        gsap.effects.mainRevealEffect(contactPageToAnimate, {
+          elementToAnimate: contactPageToAnimate,
+        });
+      }
+    });
+
+    return () => context.revert();
+  }, []);
+
   return (
     <>
       <SectionSeperator name="03. -- CONTACT" />
-      <div id="contact-div" ref={contactRef}>
+      <div id="contact-div" className="main-sections" ref={contactRef}>
         <div id="contact-page-left-side-div">Contact me</div>
         <div id="contact-page-right-side-div">
           <div id="contact-page-right-side-top-div">

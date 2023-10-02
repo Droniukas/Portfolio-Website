@@ -1,13 +1,27 @@
-import React, { useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 
 import './SkillsPage.css';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import { skills } from './resources/data/skills';
-import useFadeIn from '../../hooks/useFadeIn';
+import { gsap } from '../../config/gsap';
 
 const SkillsPage = () => {
   const skillsRef = useRef();
-  useFadeIn(skillsRef);
+
+  useLayoutEffect(() => {
+    const skillsPageToAnimate = skillsRef.current;
+
+    const context = gsap.context(() => {
+      if (skillsPageToAnimate) {
+        gsap.effects.mainRevealEffect(skillsPageToAnimate, {
+          elementToAnimate: skillsPageToAnimate,
+        });
+      }
+    });
+
+    return () => context.revert();
+  }, []);
+
   return (
     <>
       <div id="skills-div">

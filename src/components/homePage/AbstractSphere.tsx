@@ -5,8 +5,6 @@ import sky from './resources/images/3-static-gradient-3.jpg';
 import vertex from './resources/shaders/vertex.glsl';
 import fragment from './resources/shaders/fragment.glsl';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 import * as THREE from 'three';
 
@@ -30,7 +28,7 @@ const AbstractSphere = () => {
     }
 
     if (ref.current) {
-      ref.current.position.y += Math.sin(clock.elapsedTime) / 370;
+      ref.current.position.y += Math.sin(clock.elapsedTime) / 280;
       gsap.to(ref.current.rotation, {
         y: mouseXpercentage * 0.5,
         x: mouseYpercentage * 0.5 - Math.PI / 4.4,
@@ -40,7 +38,6 @@ const AbstractSphere = () => {
   });
 
   useEffect(() => {
-    console.log('stoped loading');
     if (shaderMaterialRef.current) {
       shaderMaterialRef.current.uniforms.uSky = {
         value: new THREE.TextureLoader().load(sky),
@@ -60,7 +57,6 @@ const AbstractSphere = () => {
   }, []);
 
   return (
-    // <Float>
     <mesh ref={ref}>
       <icosahedronGeometry args={[2, 50]} />
       <shaderMaterial
@@ -69,7 +65,6 @@ const AbstractSphere = () => {
         fragmentShader={fragment}
       />
     </mesh>
-    // </Float>
   );
 };
 

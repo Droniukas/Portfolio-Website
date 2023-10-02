@@ -1,7 +1,6 @@
 #about-div {
   display: flex;
-  min-height: 650px;
-  margin-bottom: 50px;
+  /* min-height: 650px; */
   position: relative;
 }
 

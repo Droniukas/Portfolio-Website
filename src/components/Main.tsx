@@ -6,23 +6,23 @@ import AboutPage from './aboutPage/AboutPage';
 import ContactPage from './contactPage/ContactPage';
 
 const Main = () => {
-  const [mouseXpercentage, setMouseXPercentage] = useState(0);
-  const [mouseYpercentage, setMouseYPercentage] = useState(0);
+  // const [mouseXpercentage, setMouseXPercentage] = useState(0);
+  // const [mouseYpercentage, setMouseYPercentage] = useState(0);
 
-  const gradientCircleRef = useRef<HTMLDivElement>(null);
+  // const gradientCircleRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      setMouseXPercentage(event.pageX);
-      setMouseYPercentage(event.pageY - window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (event: MouseEvent) => {
+  //     setMouseXPercentage(event.pageX);
+  //     setMouseYPercentage(event.pageY - window.scrollY);
+  //   };
 
-    window.addEventListener('mousemove', handleMouseMove);
+  //   window.addEventListener('mousemove', handleMouseMove);
 
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('mousemove', handleMouseMove);
+  //   };
+  // }, []);
 
   // const animation = () => {
   //   if (gradientCircleRef.current) {
@@ -39,7 +39,7 @@ const Main = () => {
   return (
     <>
       <div id="main-div" className="gradient-background">
-        <div id="gradient-circle-container">
+        {/* <div id="gradient-circle-container">
           <div
             ref={gradientCircleRef}
             id="gradient-circle"
@@ -48,7 +48,7 @@ const Main = () => {
               top: `${mouseYpercentage}px`,
             }}
           ></div>
-        </div>
+        </div> */}
         <Home />
         <AboutPage />
         <ExperiencePage />
