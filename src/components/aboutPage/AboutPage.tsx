@@ -81,7 +81,7 @@ const AboutPage = () => {
   return (
     <>
       <SectionSeperator name="01. -- ABOUT" />
-      <div id="about-div-parent" className="main-sections">
+      <div id="about" className="main-sections">
         <div id="about-div" ref={aboutRef}>
           <div id="about-div-photo">
             <div className="about-top-div" />

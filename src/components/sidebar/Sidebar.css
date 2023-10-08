@@ -11,4 +11,9 @@
   margin-top: 5px;
   margin-bottom: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-img:hover {
+  scale: 1.1;
 }

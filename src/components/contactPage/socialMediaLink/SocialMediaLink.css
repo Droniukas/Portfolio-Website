@@ -3,6 +3,10 @@
   width: min-content;
 }
 
+.social-media-link-div:last-of-type {
+  margin-bottom: 0px;
+}
+
 .social-media-link {
   text-decoration: none;
   color: black;

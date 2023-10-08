@@ -16,6 +16,12 @@
   flex: 3;
 }
 
+#about {
+  /* for smooth scroll */
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
 .about-top-div {
   min-height: 50px;
 }

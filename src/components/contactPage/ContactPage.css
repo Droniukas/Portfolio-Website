@@ -1,22 +1,33 @@
+#contact {
+  padding-top: 70px;
+  margin-top: -70px;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #contact-div {
-  min-height: calc(100vh - (70px + var(--section-margin-bottom)));
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 #contact-page-left-side-div {
   flex: 1;
-  margin-top: 60px;
+  margin-top: 50px;
   font-size: var(--largest-font-size);
   font-weight: 500;
 }
 
 #contact-page-right-side-div {
   flex: 1;
-  width: 600px;
   min-height: 370px;
   margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #contact-page-right-side-top-div {
@@ -28,7 +39,6 @@
 }
 
 #contact-page-right-side-bottom-div {
-  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -39,10 +49,6 @@
   font-size: var(--medium-font-size);
 }
 
-#social-media-div {
-  padding-right: 8%;
-}
-
 .contact-info-child-div {
   margin-top: 50px;
 }
@@ -50,4 +56,25 @@
 #social-media-div,
 #general-info-div {
   margin-top: 50px;
+  padding-right: 8%;
+}
+
+@media all and (max-width: 500px) {
+  #contact-page-right-side-div {
+    margin-top: 50px;
+  }
+
+  #contact-page-left-side-div {
+    font-size: var(--large-font-size);
+    font-weight: 700;
+  }
+
+  .contact-info-child-div {
+    margin-top: 25px;
+  }
+
+  #contact-page-left-side-div {
+    margin-top: 0px; /*if I choose to wrap maybe this will need more?*/
+  }
+  /*also use this query for the instead of the flex wrap on the container*/
 }

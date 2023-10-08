@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import './HomePage.css';
 import starIcon from './star-icon.png';
 import minus from './minus.png';
@@ -11,8 +11,6 @@ const Home = () => {
   const homeRef = useRef();
   const expandButtonTextRef = useRef();
 
-  // const [expandButtonSplitText, setExpandButtonSplitText] = useState<SplitType>();
-
   useLayoutEffect(() => {
     const homePageToAnimate = homeRef.current;
 
@@ -20,7 +18,7 @@ const Home = () => {
       if (homePageToAnimate) {
         gsap.effects.mainRevealEffect(homePageToAnimate, {
           elementToAnimate: homePageToAnimate,
-          toogleActions: 'complete complete restart complete',
+          toogleActions: 'restart reverse restart reverse',
         });
       }
     });
@@ -28,44 +26,12 @@ const Home = () => {
     return () => context.revert();
   }, []);
 
-  // useEffect(() => {
-  //   const expandButtonTextToAnimate = expandButtonTextRef.current;
-  //   if (expandButtonTextToAnimate) {
-  //     setExpandButtonSplitText(new SplitType(expandButtonTextToAnimate));
-  //     const words = document.querySelectorAll('.expand-button-text .char');
-  //     console.log(words);
-  //   }
-  // }, []);
-
-  // const animateSplitTextOnEnter = () => {
-  //   const context = gsap.context(() => {
-  //     gsap.to('.expand-button-text > .line > .word > .char', {
-  //       translateY: -2,
-  //       stagger: 0.05,
-  //       duration: 0.1,
-  //     });
-  //   });
-
-  //   return () => context.revert();
-  // };
-
-  // const revertSplitTextOnLeave = () => {
-  //   const context = gsap.context(() => {
-  //     gsap.to('.expand-button-text > .line > .word > .char', {
-  //       translateY: 0,
-  //       stagger: 0.05,
-  //       duration: 0.1,
-  //     });
-  //   });
-
-  //   return () => context.revert();
-  // };
-
   const canvasRef = useRef<HTMLCanvasElement>(null!);
 
   return (
     <>
-      <div id="home-div-parent" className="main-sections">
+      {/* <div style={{ position: 'absolute', top: 0 }} id="home"></div> */}
+      <div id="home" className="main-sections">
         <div id="home-div" ref={homeRef}>
           <div id="home-page-all-top-items-div">
             <div id="background-model">
@@ -81,7 +47,7 @@ const Home = () => {
             <div id="home-page-above-bottom-line-items-div">
               <img src={starIcon} id="home-page-star-icon-img" />
               <img src={minus} id="home-page-star-icon-img" />
-              constantly seeking new challenges
+              <div id="above-line-text">constantly seeking new challenges</div>
             </div>
             <div className="page-line" id="home-page-line" />
             <div id="home-page-below-bottom-line-items-div">
@@ -91,18 +57,30 @@ const Home = () => {
                 create digital experiences that leave a mark.{' '}
               </div>
               <div id="home-page-expand-button-div">
-                <button
-                  className="expand-button"
-                  // onPointerEnter={animateSplitTextOnEnter}
-                  // onPointerLeave={revertSplitTextOnLeave}
-                >
-                  <div
-                    ref={expandButtonTextRef}
-                    className="expand-button-text text-inhanced"
+                <a href="#contact">
+                  <button
+                    className="expand-button"
+                    // onPointerEnter={animateSplitTextOnEnter}
+                    // onPointerLeave={revertSplitTextOnLeave}
                   >
-                    Contact me
-                  </div>
-                </button>
+                    <span
+                      ref={expandButtonTextRef}
+                      className="expand-button-text text-inhanced"
+                    >
+                      {'Contact me'.split('').map((char, index) => {
+                        const style = {
+                          '--index': index,
+                          '--text-char-size': 10,
+                        } as React.CSSProperties;
+                        return (
+                          <div style={style} className="char" key={index}>
+                            {`${char}`}
+                          </div>
+                        );
+                      })}
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>

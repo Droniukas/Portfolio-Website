@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-scroll';
 import './Header.css';
-import { gsap } from 'gsap';
 
 const Header = (): JSX.Element => {
   // useEffect(() => {
@@ -16,22 +14,18 @@ const Header = (): JSX.Element => {
   return (
     <>
       <div id="fixed-buttons-div">
-        <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
-          <button className="fixed-button home">
-            <div className="button-numbers"></div>HOME
-          </button>
-        </Link>
-        <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
-          <button className="fixed-button about">
-            <div className="button-numbers">01. </div>ABOUT
-          </button>
-        </Link>
-        <button className="fixed-button experience">
+        <a className="fixed-button home" href="#home">
+          <div className="button-numbers"></div>HOME
+        </a>
+        <a className="fixed-button about" href="#about">
+          <div className="button-numbers">01. </div>ABOUT
+        </a>
+        <a className="fixed-button experience" href="#experience">
           <div className="button-numbers">02. </div>EXPERIENCE
-        </button>
-        <button className="fixed-button contact">
+        </a>
+        <a className="fixed-button contact" href="#contact">
           <div className="button-numbers">03. </div>CONTACT
-        </button>
+        </a>
       </div>
     </>
   );

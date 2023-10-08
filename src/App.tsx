@@ -17,8 +17,8 @@ function App(): JSX.Element {
       ) : (
         <>
           <Header />
-          <Sidebar />
           <Main />
+          <Sidebar />
         </>
       )}
     </>

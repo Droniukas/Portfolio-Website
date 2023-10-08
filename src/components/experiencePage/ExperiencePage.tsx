@@ -27,8 +27,8 @@ const ExperiencePage = () => {
 
   return (
     <>
-      <div id="experience-skills-div">
-        <div id="experience-div" className="main-sections">
+      <div id="experience-skills-div" className="main-sections">
+        <div id="experience">
           <SectionSeperator name="02. -- EXPERIENCE" />
           <div id="experience-grid" ref={experienceRef}>
             {experiences.map((experience) => {

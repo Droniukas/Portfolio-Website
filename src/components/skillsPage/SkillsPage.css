@@ -10,10 +10,8 @@
 }
 
 .skill-div {
-  /* new addition */
   background: var(--main-backdrop-color);
   backdrop-filter: blur(20px) saturate(1.7);
-  /* new addition */
   flex-grow: 1;
   display: flex;
   padding-right: 15px;
@@ -23,12 +21,45 @@
   align-items: center;
 }
 
-.skill-img {
+.skill-img-container {
+  position: relative;
   width: 30px;
   margin: 15px;
   border-radius: 5px;
 }
 
+.skill-img {
+  width: 100%;
+  height: 100%;
+}
+
 .second-skill-img {
   margin-left: 0;
+}
+
+/* sparkles */
+.sparkle {
+  --sparkle-color: #ffffff5e;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkle 4s infinite alternate;
+}
+
+@keyframes sparkle {
+  50% {
+    opacity: 0.4;
+    transform: scale(0.5);
+    box-shadow: 0px 0px 10px 5px var(--sparkle-color);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.709);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+    box-shadow: 0px 0px 10px 5px var(--sparkle-color);
+  }
 }

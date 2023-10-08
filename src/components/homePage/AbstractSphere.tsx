@@ -28,7 +28,7 @@ const AbstractSphere = () => {
     }
 
     if (ref.current) {
-      ref.current.position.y += Math.sin(clock.elapsedTime) / 280;
+      ref.current.position.y += Math.sin(clock.elapsedTime * 1.6) / 250;
       gsap.to(ref.current.rotation, {
         y: mouseXpercentage * 0.5,
         x: mouseYpercentage * 0.5 - Math.PI / 4.4,

@@ -8,6 +8,7 @@ const cameraDistanceForRectangle = (
   const aspectRatio = canvasWidth / canvasHeight;
   let a: number, b: number;
   const scale = 2.8; // control how much smaller it gets
+  const padding = 2; // control inline padding
   if (objWidth > objHeight) {
     a =
       Math.max(objWidth, objHeight) /
@@ -23,7 +24,7 @@ const cameraDistanceForRectangle = (
       Math.tan((Math.PI * camera.fov) / 360);
     b = Math.max(objWidth, objHeight) / scale / Math.tan((Math.PI * camera.fov) / 360);
   }
-  return Math.max(a, b);
+  return Math.max(a, b) + padding;
 };
 // NOTE: this is some extra code to slightly simplify the above function
 const getCameraDistanceForSquare = (
