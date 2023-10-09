@@ -1,14 +1,17 @@
 import { useFrame } from '@react-three/fiber';
 import React, { useEffect, useRef, useState } from 'react';
 import { Mesh, MeshPhysicalMaterial, ShaderMaterial } from 'three';
-import sky from './resources/images/new-static-gradient-3.jpg';
 import vertex from './resources/shaders/vertex.glsl';
 import fragment from './resources/shaders/fragment.glsl';
 import { gsap } from 'gsap';
-
 import * as THREE from 'three';
 
-const AbstractSphere = () => {
+type AbstractSphereProps = {
+  texture: THREE.Texture;
+};
+
+const AbstractSphere = (props: AbstractSphereProps) => {
+  const { texture } = props;
   const meshRef = useRef<Mesh>(null);
   const shaderMaterialRef = useRef<ShaderMaterial>();
 
@@ -43,7 +46,7 @@ const AbstractSphere = () => {
   useEffect(() => {
     if (shaderMaterialRef.current) {
       shaderMaterialRef.current.uniforms.uSky = {
-        value: new THREE.TextureLoader().load(sky),
+        value: texture,
       };
     }
 

@@ -2,15 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import './Header.css';
 
 const Header = (): JSX.Element => {
-  // useEffect(() => {
-  //   gsap.to('#fixed-buttons-div', {
-  //     rotateZ: -90,
-  //     top: '450px',
-  //     left: '100px',
-  //     height: '100px',
-  //   });
-  // }, []);
-
   return (
     <>
       <div id="fixed-buttons-div">

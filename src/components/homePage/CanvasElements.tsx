@@ -1,13 +1,15 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import AbstractSphere from './AbstractSphere';
 import { PerspectiveCamera } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import { getCameraDistanceForSquare } from './Utils';
+
 type CanvasElementsProps = {
   canvasRef: React.MutableRefObject<HTMLCanvasElement>;
+  sphereTexture: THREE.Texture;
 };
 const CanvasElements = (props: CanvasElementsProps) => {
-  const { canvasRef } = props;
+  const { canvasRef, sphereTexture } = props;
   const OBJECT_SIZE = useMemo(() => 6, []);
 
   const cameraRef = useRef<THREE.PerspectiveCamera>(null);
@@ -54,7 +56,7 @@ const CanvasElements = (props: CanvasElementsProps) => {
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 10]} intensity={1.9} />
       <PerspectiveCamera ref={cameraRef} makeDefault fov={50} position={[0, 0.4, 6.5]} />
-      <AbstractSphere />
+      <AbstractSphere texture={sphereTexture} />
     </>
   );
 };

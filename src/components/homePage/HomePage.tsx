@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import './HomePage.css';
 import starIcon from './star-icon.png';
 import minus from './minus.png';
@@ -6,9 +6,21 @@ import minus from './minus.png';
 import { Canvas } from '@react-three/fiber';
 import CanvasElements from './CanvasElements';
 import { gsap } from '../../config/gsap';
+import sky from './resources/images/new-static-gradient-3.jpg';
+import * as THREE from 'three';
 
 const Home = () => {
   const homeRef = useRef();
+
+  const [sphereTexture, setSphereTexture] = useState<THREE.Texture>(null);
+
+  useEffect(() => {
+    const textureLoader = new THREE.TextureLoader();
+    textureLoader.load(sky, (loadedTexture) => {
+      setSphereTexture(loadedTexture);
+      console.log('finished');
+    });
+  }, []);
 
   useLayoutEffect(() => {
     const homePageToAnimate = homeRef.current;
@@ -29,15 +41,16 @@ const Home = () => {
 
   return (
     <>
-      {/* <div style={{ position: 'absolute', top: 0 }} id="home"></div> */}
       <div id="home" className="main-sections">
         <div id="home-div" ref={homeRef}>
           <div id="home-page-all-top-items-div">
-            <div id="background-model">
-              <Canvas ref={canvasRef}>
-                <CanvasElements canvasRef={canvasRef} />
-              </Canvas>
-            </div>
+            {sphereTexture && (
+              <div id="background-model">
+                <Canvas ref={canvasRef}>
+                  <CanvasElements sphereTexture={sphereTexture} canvasRef={canvasRef} />
+                </Canvas>
+              </div>
+            )}
             <div id="greetings-text-div">Hi, my name is</div>
             <div id="name">Domas Raila</div>
             <div id="current-position">Junior software-developer</div>
