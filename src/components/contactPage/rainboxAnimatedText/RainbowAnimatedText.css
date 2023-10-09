@@ -17,7 +17,7 @@
   --animation-lenght-coefficient: 0.035s;
   --animation-settings: calc(var(--animation-lenght-coefficient) * 20)
     var(--text-animation-curve)
-    calc(var(--animation-lenght-coefficient) * ((var(--index) * 10) / var(--chars))) 1;
+    calc(var(--animation-lenght-coefficient) * ((var(--index) * 10) / var(--chars))) 2;
   animation: var(--animation-settings) changePosition,
     var(--animation-settings) changeColor;
 }
