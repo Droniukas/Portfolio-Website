@@ -1,7 +1,7 @@
-import { useFrame, useThree } from '@react-three/fiber';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Mesh, MeshPhysicalMaterial, Shader, ShaderMaterial } from 'three';
-import sky from './resources/images/3-static-gradient-3.jpg';
+import { useFrame } from '@react-three/fiber';
+import React, { useEffect, useRef, useState } from 'react';
+import { Mesh, MeshPhysicalMaterial, ShaderMaterial } from 'three';
+import sky from './resources/images/new-static-gradient-3.jpg';
 import vertex from './resources/shaders/vertex.glsl';
 import fragment from './resources/shaders/fragment.glsl';
 import { gsap } from 'gsap';
@@ -9,17 +9,20 @@ import { gsap } from 'gsap';
 import * as THREE from 'three';
 
 const AbstractSphere = () => {
-  const ref = useRef<Mesh>(null);
+  const meshRef = useRef<Mesh>(null);
   const shaderMaterialRef = useRef<ShaderMaterial>();
 
-  const [mouseXpercentage, setMouseXPercentage] = useState<number | null>(null);
-  const [mouseYpercentage, setMouseYPercentage] = useState<number | null>(null);
+  const [mouseXpercentage, setMouseXPercentage] = useState<number>(0);
+  const [mouseYpercentage, setMouseYPercentage] = useState<number>(2);
 
   useFrame(({ clock }) => {
-    if ((ref.current.material as MeshPhysicalMaterial).userData.shader !== undefined) {
-      (ref.current.material as MeshPhysicalMaterial).userData.shader.uniforms.uTime = {
-        value: clock.elapsedTime,
-      };
+    if (
+      (meshRef.current.material as MeshPhysicalMaterial).userData.shader !== undefined
+    ) {
+      (meshRef.current.material as MeshPhysicalMaterial).userData.shader.uniforms.uTime =
+        {
+          value: clock.elapsedTime,
+        };
     }
     if (shaderMaterialRef.current) {
       shaderMaterialRef.current.uniforms.uTime = {
@@ -27,11 +30,11 @@ const AbstractSphere = () => {
       };
     }
 
-    if (ref.current) {
-      ref.current.position.y += Math.sin(clock.elapsedTime * 1.6) / 250;
-      gsap.to(ref.current.rotation, {
-        y: mouseXpercentage * 0.5,
-        x: mouseYpercentage * 0.5 - Math.PI / 4.4,
+    if (meshRef.current) {
+      meshRef.current.position.y += Math.sin(clock.elapsedTime * 1.6) / 250;
+      gsap.to(meshRef.current.rotation, {
+        y: mouseXpercentage * 0.74,
+        x: (mouseYpercentage - 2) / 2.45,
         duration: 2,
       });
     }
@@ -57,7 +60,7 @@ const AbstractSphere = () => {
   }, []);
 
   return (
-    <mesh ref={ref}>
+    <mesh ref={meshRef}>
       <icosahedronGeometry args={[2, 50]} />
       <shaderMaterial
         ref={shaderMaterialRef}

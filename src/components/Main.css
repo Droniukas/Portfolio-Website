@@ -126,6 +126,8 @@ body::after {
 
   --mobile-width-threshold: 500px;
 
+  --text-animation-curve: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
   /* gradients */
   /* ----------------------- */
   --main-green-color: #0bbb87;
@@ -179,4 +181,13 @@ body::after {
 .main-sections {
   min-height: calc(100vh - var(--section-margin-bottom));
   margin-bottom: var(--section-margin-bottom);
+}
+
+.horizontal-border {
+  height: 0.5px;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  bottom: 0px;
 }

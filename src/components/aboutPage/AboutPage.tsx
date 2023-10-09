@@ -49,7 +49,6 @@ const AboutPage = () => {
           ease: 'power.out',
           width: '100%',
           scrollTrigger: {
-            markers: true,
             trigger: horizontalBorderToAnimate,
             toggleActions: customToggleActions,
           },
@@ -126,17 +125,14 @@ const AboutPage = () => {
             <div className="about-top-div" />
             <div className="about-middle-div" />
           </div>
-          <div id="about-horizontal-border-top" className="about-horizontal-border" />
+          <div id="about-horizontal-border-top" className="horizontal-border" />
           <div
             id="about-horizontal-border-bottom"
-            className="about-horizontal-border"
+            className="horizontal-border"
             ref={horizontalBorderBottomRef}
           />
           {windowSize.width < 650 && (
-            <div
-              id="about-horizontal-border-second-top"
-              className="about-horizontal-border"
-            />
+            <div id="about-horizontal-border-second-top" className="horizontal-border" />
           )}
         </div>
       </div>

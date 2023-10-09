@@ -9,7 +9,6 @@ import { gsap } from '../../config/gsap';
 
 const Home = () => {
   const homeRef = useRef();
-  const expandButtonTextRef = useRef();
 
   useLayoutEffect(() => {
     const homePageToAnimate = homeRef.current;
@@ -58,19 +57,12 @@ const Home = () => {
               </div>
               <div id="home-page-expand-button-div">
                 <a href="#contact">
-                  <button
-                    className="expand-button"
-                    // onPointerEnter={animateSplitTextOnEnter}
-                    // onPointerLeave={revertSplitTextOnLeave}
-                  >
-                    <span
-                      ref={expandButtonTextRef}
-                      className="expand-button-text text-inhanced"
-                    >
+                  <button className="expand-button">
+                    <span className="expand-button-text text-inhanced">
                       {'Contact me'.split('').map((char, index) => {
                         const style = {
                           '--index': index,
-                          '--text-char-size': 10,
+                          '--chars': 10,
                         } as React.CSSProperties;
                         return (
                           <div style={style} className="char" key={index}>

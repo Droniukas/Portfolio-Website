@@ -1,0 +1,45 @@
+.char-animated {
+  display: inline-block;
+  white-space: pre-wrap;
+  background: linear-gradient(
+    to right,
+    var(--main-blue-color),
+    var(--main-green-color),
+    #24a2c5
+  );
+  background-size: calc(100% * var(--chars)) 200%;
+  background-position: calc(100% * (var(--index)));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.char-animated-animation {
+  --animation-lenght-coefficient: 0.035s;
+  --animation-settings: calc(var(--animation-lenght-coefficient) * 20)
+    var(--text-animation-curve)
+    calc(var(--animation-lenght-coefficient) * ((var(--index) * 10) / var(--chars))) 1;
+  animation: var(--animation-settings) changePosition,
+    var(--animation-settings) changeColor;
+}
+
+@keyframes changePosition {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+  }
+  50% {
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+  }
+}

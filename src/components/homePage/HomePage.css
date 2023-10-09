@@ -93,6 +93,7 @@
   }
 }
 
+/* contact me button */
 .expand-button {
   font-kerning: none;
   background: var(--main-backdrop-color);
@@ -116,17 +117,18 @@
     var(--main-green-color),
     #24a2c5
   );
-  background-size: calc(100% * var(--text-char-size)) 200%;
+  background-size: calc(100% * var(--chars)) 200%;
   background-position: calc(100% * (var(--index)));
   background-clip: text;
   -webkit-background-clip: text;
-  transition: all calc(0.055s * (var(--index) + 1)) cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all calc(0.055s * (var(--index) + 1)) var(--text-animation-curve);
 }
 
 .expand-button:hover > .text-inhanced > .char {
   transform: translateY(-2px);
   color: rgba(0, 0, 0, 0);
 }
+/* contact me button */
 
 #greetings-text-div {
   background-color: var(--main-blue-color);

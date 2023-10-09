@@ -24,6 +24,7 @@
 #contact-page-right-side-div {
   flex: 1;
   min-height: 370px;
+  min-width: 270px;
   margin-top: 200px;
   display: flex;
   flex-direction: column;
@@ -35,7 +36,7 @@
   padding-bottom: 50px;
   padding-right: 8%;
   font-weight: 500;
-  border-bottom: 1px solid black;
+  position: relative;
 }
 
 #contact-page-right-side-bottom-div {
@@ -59,22 +60,22 @@
   padding-right: 8%;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 800px) {
   #contact-page-right-side-div {
     margin-top: 50px;
   }
-
   #contact-page-left-side-div {
-    font-size: var(--large-font-size);
+    margin-top: 0px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #contact-page-left-side-div {
+    font-size: var(--largest-font-size);
     font-weight: 700;
   }
 
   .contact-info-child-div {
     margin-top: 25px;
   }
-
-  #contact-page-left-side-div {
-    margin-top: 0px; /*if I choose to wrap maybe this will need more?*/
-  }
-  /*also use this query for the instead of the flex wrap on the container*/
 }

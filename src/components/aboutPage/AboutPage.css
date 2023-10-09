@@ -43,14 +43,6 @@
   height: auto;
 }
 
-.about-horizontal-border {
-  height: 0.5px;
-  position: absolute;
-  left: 0;
-  background-color: black;
-  width: 100%;
-}
-
 #about-horizontal-border-top {
   top: 50px;
 }

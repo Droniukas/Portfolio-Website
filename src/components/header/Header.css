@@ -58,3 +58,9 @@
   font-size: var(--smallest-font-size);
   font-weight: 400;
 }
+
+@media all and (max-width: 700px) {
+  #fixed-buttons-div {
+    display: none;
+  }
+}
