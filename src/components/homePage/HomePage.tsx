@@ -6,7 +6,7 @@ import minus from './minus.png';
 import { Canvas } from '@react-three/fiber';
 import CanvasElements from './CanvasElements';
 import { gsap } from '../../config/gsap';
-import sky from './resources/images/new-static-gradient-3.jpg';
+import sky from './resources/images/static-gradient-3.jpg';
 import * as THREE from 'three';
 
 const Home = () => {
@@ -18,7 +18,6 @@ const Home = () => {
     const textureLoader = new THREE.TextureLoader();
     textureLoader.load(sky, (loadedTexture) => {
       setSphereTexture(loadedTexture);
-      console.log('finished');
     });
   }, []);
 

@@ -180,6 +180,7 @@ body::after {
 
 .main-sections {
   min-height: calc(100vh - var(--section-margin-bottom));
+  min-height: calc(100dvh - var(--section-margin-bottom));
   margin-bottom: var(--section-margin-bottom);
 }
 

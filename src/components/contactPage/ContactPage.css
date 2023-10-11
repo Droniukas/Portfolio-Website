@@ -2,6 +2,7 @@
   padding-top: 70px;
   margin-top: -70px;
   min-height: calc(100vh - 70px);
+  min-height: calc(100dvh - 70px);
   display: flex;
   flex-direction: column;
   justify-content: center;

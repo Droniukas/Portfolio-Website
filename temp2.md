@@ -17,23 +17,25 @@ const Sidebar = () => {
 
   // Controls the speed of morphing.
   const morphLenght = 0.5;
-  const cooldownLenght = 1;
 
   let textIndex = texts.length - 1; // 1. intially we get the last element from the texts array
-  let time = new Date(); // 1. Initially we get the current date
+  // let time = new Date(); // 1. Initially we get the current date
   let morph = 0;
-  let cooldown = cooldownLenght;
+  let cooldown = 0;
+  let time;
 
-  function doMorph() {
+  function doMorph(animationRequestId: number) {
     morph -= cooldown; // calculate morph time elapsed
+    console.log(cooldown);
     cooldown = 0;
 
     let morphRatio = morph / morphLenght;
 
     if (morphRatio > 1) {
-      cooldown = cooldownLenght;
-      console.log(morphRatio);
-      morphRatio = 1; // at this point it's over one but we set it just to be sure
+      cooldown = 0;
+      morphRatio = 1;
+      doCooldown();
+      stopMorphing(animationRequestId);
     }
 
     setMorph(morphRatio);
@@ -62,50 +64,43 @@ const Sidebar = () => {
     text1Ref.current.style.opacity = '0%';
   }
 
-  const stopMorphing = () => {
+  const stopMorphing = (animationRequestId: number) => {
+    window.cancelAnimationFrame(animationRequestId);
     morphingHasStarted.current = false;
   };
 
   const startMorphing = () => {
-    morphingHasStarted.current = true; // mby single func
+    text2Ref.current.textContent = texts[(textIndex + 1) % texts.length];
+    morphingHasStarted.current = true;
+    time = new Date();
     animate();
   };
 
   useEffect(() => {
     text1Ref.current.textContent = texts[textIndex % texts.length];
-    text2Ref.current.textContent = texts[(textIndex + 1) % texts.length];
     setTimeout(() => {
       startMorphing();
-    }, 1500);
-    animate();
+    }, 650);
   }, []);
 
   // Animation loop, which is called every frame.
   function animate() {
-    // if (morphingHasStarted.current) {
-    requestAnimationFrame(animate);
-    // }
+    const animationRequestId = window.requestAnimationFrame(animate);
 
     const newTime = new Date();
-    // if we are cooling down we should increment index ↓
-    const shouldIncrementIndex = cooldown > 0;
     // calculate how much time has elapsed since the last frame in seconds ↓
-    const dt = (newTime.getTime() - time.getTime()) / 1000;
+    const delta = (newTime.getTime() - time.getTime()) / 1000;
+    console.log(delta);
     time = newTime;
 
-    cooldown -= dt; // makes the cooldown count down
+    cooldown -= delta; // makes the cooldown count down
     if (text1Ref.current && text2Ref.current) {
-      if (cooldown <= 0) {
-        if (shouldIncrementIndex) {
-          textIndex++;
-        }
-        doMorph(); // if cooldown is less than 0 we start morphing
-      } else {
-        stopMorphing();
-        doCooldown();
-      }
+      doMorph(animationRequestId);
     }
   }
+
+  // so on trigger we should invoke the doMorph loop and increment textIndex by one
+  // figure out when the morphing has ended to invoke the doCooldown function
 
   return (
     <div id="sidebar-div">
