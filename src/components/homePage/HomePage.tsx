@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import './HomePage.css';
 import starIcon from './star-icon.png';
 import minus from './minus.png';

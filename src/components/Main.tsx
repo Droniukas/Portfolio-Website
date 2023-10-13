@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from './homePage/HomePage';
 import './Main.css';
 import ExperiencePage from './experiencePage/ExperiencePage';
@@ -7,26 +7,21 @@ import ContactPage from './contactPage/ContactPage';
 import sky from './static-gradient-3.jpg';
 import * as THREE from 'three';
 
-const Main = () => {
-  const [sphereTexture, setSphereTexture] = useState<THREE.Texture>(null);
+type MainProps = {
+  sphereTexture: THREE.Texture;
+};
 
-  useEffect(() => {
-    const textureLoader = new THREE.TextureLoader();
-    textureLoader.load(sky, (loadedTexture) => {
-      setSphereTexture(loadedTexture);
-    });
-  }, []);
+const Main = (props: MainProps) => {
+  const { sphereTexture } = props;
 
   return (
     <>
-      {sphereTexture && (
-        <div id="main-div" className="gradient-background">
-          <Home sphereTexture={sphereTexture} />
-          <AboutPage />
-          <ExperiencePage />
-          <ContactPage />
-        </div>
-      )}
+      <div id="main-div" className="gradient-background">
+        <Home sphereTexture={sphereTexture} />
+        <AboutPage />
+        <ExperiencePage />
+        <ContactPage />
+      </div>
     </>
   );
 };
