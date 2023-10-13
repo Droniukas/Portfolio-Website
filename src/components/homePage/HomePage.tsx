@@ -6,20 +6,15 @@ import minus from './minus.png';
 import { Canvas } from '@react-three/fiber';
 import CanvasElements from './CanvasElements';
 import { gsap } from '../../config/gsap';
-import sky from './resources/images/static-gradient-3.jpg';
 import * as THREE from 'three';
 
-const Home = () => {
+type HomeProps = {
+  sphereTexture: THREE.Texture;
+};
+
+const Home = (props: HomeProps) => {
+  const { sphereTexture } = props;
   const homeRef = useRef();
-
-  const [sphereTexture, setSphereTexture] = useState<THREE.Texture>(null);
-
-  useEffect(() => {
-    const textureLoader = new THREE.TextureLoader();
-    textureLoader.load(sky, (loadedTexture) => {
-      setSphereTexture(loadedTexture);
-    });
-  }, []);
 
   useLayoutEffect(() => {
     const homePageToAnimate = homeRef.current;
@@ -43,13 +38,11 @@ const Home = () => {
       <div id="home" className="main-sections">
         <div id="home-div" ref={homeRef}>
           <div id="home-page-all-top-items-div">
-            {sphereTexture && (
-              <div id="background-model">
-                <Canvas ref={canvasRef}>
-                  <CanvasElements sphereTexture={sphereTexture} canvasRef={canvasRef} />
-                </Canvas>
-              </div>
-            )}
+            <div id="background-model">
+              <Canvas ref={canvasRef}>
+                <CanvasElements sphereTexture={sphereTexture} canvasRef={canvasRef} />
+              </Canvas>
+            </div>
             <div id="greetings-text-div">Hi, my name is</div>
             <div id="name">Domas Raila</div>
             <div id="current-position">Junior software-developer</div>
