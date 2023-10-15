@@ -1,71 +1,73 @@
-import React from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import { Modal } from '@mui/material';
 import { Experience } from '../../../interfaces/Experience.interface';
 import './ModalExperiencePage.css';
-import CloseButton from './CloseButton';
-import BottomButton from './BottomButton';
-import { Direction } from '../../../Enums/Direction';
+import CloseButton from './CloseButton/CloseButton';
+import ImageSlider from './ImageSlider/ImageSlider';
 
 type ModalExperiencePageProps = {
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  handleClose: () => void;
   experience: Experience;
+  bottomButtonLeft?: () => JSX.Element;
+  bottomButtonRight?: () => JSX.Element;
+  visible: boolean;
 };
 
 const ModalExperiencePage = (props: ModalExperiencePageProps) => {
-  const { open, setOpen, experience } = props;
+  const { handleClose, experience, bottomButtonLeft, bottomButtonRight, visible } = props;
+
+  const [controlsAreHidden, setControlsAreHidden] = useState(false);
+
+  useEffect(() => {
+    setControlsAreHidden(false);
+    setTimeout(() => {
+      setControlsAreHidden(true);
+    }, 2000);
+  }, [visible]);
+
   return (
-    <Modal
-      open={open}
-      onClose={() => {
-        setOpen(false);
+    <div
+      className={`experience-modal-div`}
+      style={{
+        visibility: visible ? 'visible' : 'hidden',
+        opacity: visible ? 1 : 0,
       }}
     >
-      <div className="experience-modal-div">
-        <CloseButton setOpen={setOpen} />
-        <div className="experience-modal-top-part-div">
-          <div className="experience-modal-top-part-left-div modal-left-side">
-            <div className="experience-modal-category-header-div">EXPERIENCE</div>
-            <div className="experience-modal-name-div">{experience.name}</div>
-            <div className="experience-modal-date-and-place-div">
-              <div className="experience-modal-date-div">{experience.date}</div>
-              <div className="experience-modal-place-div">{experience.place}</div>
-            </div>
-          </div>
-          <div className="experience-modal-top-part-right-div modal-right-side">
-            <img src={experience.image} className="experience-modal-image" />
+      <CloseButton handleClose={handleClose} />
+      <div className="experience-modal-top-part-div">
+        <div className="experience-modal-top-part-left-div modal-left-side">
+          <div className="experience-modal-category-header-div">EXPERIENCE</div>
+          <div className="experience-modal-name-div">{experience.name}</div>
+          <div className="experience-modal-date-and-place-div">
+            <div className="experience-modal-date-div">{experience.date}</div>
+            <div className="experience-modal-place-div">{experience.place}</div>
           </div>
         </div>
-        <div className="experience-modal-bottom-part-div">
-          <div className="experience-modal-bottom-part-left-div modal-left-side">
-            In-depth overview -
-          </div>
-          <div className="experience-modal-bottom-part-right-div modal-right-side">
-            {experience.modal.longerDescription}
-          </div>
+
+        <ImageSlider
+          images={experience.images}
+          className={'modal-right-side'}
+          controlsAreHidden={controlsAreHidden}
+          hideControls={() => {
+            setControlsAreHidden(true);
+          }}
+        />
+      </div>
+      <div className="experience-modal-bottom-part-div">
+        <div className="experience-modal-bottom-part-left-div modal-left-side">
+          In-depth overview -
         </div>
-        <div className="experience-modal-bottom-buttons-div">
-          {experience.modal.leftBottomButton && (
-            <BottomButton
-              experience={experience}
-              direction={Direction.LEFT}
-              onClick={() => {
-                console.log('hi');
-              }}
-            />
-          )}
-          {experience.modal.rightBottomButton && (
-            <BottomButton
-              experience={experience}
-              direction={Direction.RIGHT}
-              onClick={() => {
-                console.log('hi');
-              }}
-            />
-          )}
+        <div className="experience-modal-bottom-part-right-div modal-right-side">
+          {experience.modal.longerDescription}
         </div>
       </div>
-    </Modal>
+      <div className="experience-modal-bottom-buttons-div">
+        <>
+          {bottomButtonLeft && bottomButtonLeft()}
+          {bottomButtonRight && bottomButtonRight()}
+        </>
+      </div>
+    </div>
   );
 };
 

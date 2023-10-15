@@ -1,0 +1,17 @@
+.image-slider-modal-container {
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-slider-modal-container:focus {
+  outline: none;
+}
+
+.image-slider-modal-image {
+  max-width: 100%;
+  max-height: 90vh;
+}

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Home from './homePage/HomePage';
 import './Main.css';
 import ExperiencePage from './experiencePage/ExperiencePage';
 import AboutPage from './aboutPage/AboutPage';
 import ContactPage from './contactPage/ContactPage';
-import sky from './static-gradient-3.jpg';
 import * as THREE from 'three';
 
 type MainProps = {

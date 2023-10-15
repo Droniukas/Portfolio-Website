@@ -5,6 +5,8 @@ import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import { skills } from './resources/data/skills';
 import { gsap } from '../../config/gsap';
 import { getRandom } from './Utils';
+import sparkleIcon from './resources/images/sparkle-icon.png';
+import angularIcon from './resources/images/angular-icon-min.png';
 
 const SkillsPage = () => {
   const skillsRef = useRef();
@@ -31,18 +33,19 @@ const SkillsPage = () => {
           {skills.map((skill) => {
             const starTop = getRandom(0, 100) + '%';
             const starLeft = getRandom(0, 100) + '%';
-            const starAnimationDelay = getRandom(0, 23) + 's';
+            const starAnimationDelay = getRandom(5, 23) + 's';
             return (
               <div key={skill.name} className="skill-div">
                 <div className="skill-img-container">
                   <img src={skill.image} className="skill-img" />
-                  <div
+                  <img
                     className="sparkle"
                     style={{
                       top: starTop,
                       left: starLeft,
                       animationDelay: starAnimationDelay,
                     }}
+                    src={sparkleIcon}
                   />
                 </div>
 

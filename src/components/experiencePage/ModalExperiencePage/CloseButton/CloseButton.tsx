@@ -3,18 +3,16 @@ import React from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 
 type CloseButtonProps = {
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  handleClose: () => void;
 };
 
 const CloseButton = (props: CloseButtonProps) => {
-  const { setOpen } = props;
+  const { handleClose } = props;
   return (
     <IconButton
       size="small"
       sx={{ position: 'absolute', right: '2px', top: '2px' }}
-      onClick={() => {
-        setOpen(false);
-      }}
+      onClick={handleClose}
     >
       <CloseIcon fontSize="small" />
     </IconButton>

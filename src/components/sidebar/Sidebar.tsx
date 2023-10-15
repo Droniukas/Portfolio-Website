@@ -81,7 +81,7 @@ const Sidebar = () => {
         </div>
       </a>
 
-      <svg id="filters">
+      <svg id="filters" style={{ display: 'none' }}>
         <defs>
           <filter id="threshold">
             <feColorMatrix

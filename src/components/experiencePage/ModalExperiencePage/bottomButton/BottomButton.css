@@ -1,0 +1,42 @@
+.experience-modal-button-text {
+  text-align: start;
+}
+
+.experience-modal-button-small-text {
+  font-size: var(--smallest-font-size);
+  color: var(--main-grey-color);
+  font-weight: 500;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@container (max-width: 360px) {
+  .experience-modal-button-small-text {
+    width: 100px;
+  }
+}
+
+@container (max-width: 260px) {
+  .experience-modal-button-small-text {
+    width: 80px;
+  }
+}
+
+.align-right {
+  text-align: end;
+}
+
+.modal-button-icon-right,
+.modal-button-icon-left {
+  margin-bottom: 15px;
+}
+
+.modal-button-icon-right {
+  margin-left: 5px;
+}
+
+.modal-button-icon-left {
+  margin-right: 5px;
+}

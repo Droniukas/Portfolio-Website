@@ -42,11 +42,8 @@
   margin-top: 0;
   flex: 1 0 0;
   height: fit-content;
-  /* new addition */
   background: var(--main-backdrop-color);
   backdrop-filter: blur(20px) saturate(1.7);
-  /* border-radius: 10px; */
-  /* new addition */
   cursor: pointer;
   transition: scale 0.3s;
 }
@@ -96,4 +93,9 @@
   font-weight: 500;
   font-size: var(--medium-font-size);
   margin-bottom: 13px;
+}
+
+.modal-visible {
+  opacity: 1 !important;
+  display: flex !important;
 }

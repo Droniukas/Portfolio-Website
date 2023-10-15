@@ -8,11 +8,13 @@
   background-color: var(--main-background-color);
   padding: 25px;
   border-radius: 3px;
-  display: flex;
   flex-direction: column;
   max-height: 1550px;
   overflow-y: auto;
   height: 80%;
+  container-type: inline-size;
+  display: flex;
+  /* transition: opacity 0.3s, visibility 0.3s; idk if looks good*/
 }
 
 .experience-modal-div:focus {
@@ -24,20 +26,24 @@
     width: auto;
     max-width: 90%;
   }
-}
-
-.modal-left-side {
-  width: 35%;
+  .modal-right-side {
+    width: 100%;
+  }
 }
 
 .modal-right-side {
   width: 65%;
 }
 
+.modal-left-side {
+  width: 35%;
+}
+
 .experience-modal-top-part-div {
   display: flex;
   gap: 15px;
-  max-height: 27vh;
+  height: 27vh;
+  height: 27dvh;
 }
 
 .experience-modal-bottom-part-div {
@@ -46,23 +52,29 @@
   gap: 15px;
   position: relative;
   flex-grow: 2;
-  max-height: 40vh;
+  height: 40vh;
+  height: 40dvh;
 }
 
-@media all and (max-width: 530px) {
+@container (max-width: 350px) {
+  .experience-modal-top-part-div {
+    height: 33vh;
+    height: 33dvh;
+  }
+  .experience-modal-bottom-part-div {
+    height: 34vh;
+    height: 34dvh;
+  }
+}
+
+@media all and (max-width: 630px) {
   .experience-modal-bottom-part-div {
     max-height: none;
     flex-direction: column;
   }
   .modal-right-side {
-    width: auto;
+    width: 100%;
   }
-}
-
-.experience-modal-image {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .experience-modal-top-part-left-div {

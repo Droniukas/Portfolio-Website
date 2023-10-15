@@ -14,10 +14,10 @@
 }
 
 .char-animated-animation {
-  --animation-lenght-coefficient: 0.03s;
+  --animation-lenght-coefficient: 0.06s;
   --animation-settings: calc(var(--animation-lenght-coefficient) * 20)
     var(--text-animation-curve)
-    calc(var(--animation-lenght-coefficient) * ((var(--index) * 10) / var(--chars))) 2;
+    calc(var(--animation-lenght-coefficient) * ((var(--index) * 10) / var(--chars))) 1;
   animation: var(--animation-settings) changePosition,
     var(--animation-settings) changeColor;
 }

@@ -1,0 +1,16 @@
+.image-slider-arrow {
+  position: absolute;
+  padding: 5px;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+}
+
+.image-slider-arrow-right {
+  right: 0;
+}
+
+.image-slider-arrow-left {
+  left: 0;
+}
