@@ -14,7 +14,7 @@
   height: 80%;
   container-type: inline-size;
   display: flex;
-  /* transition: opacity 0.3s, visibility 0.3s; idk if looks good*/
+  transition: opacity 0.3s, visibility 0.3s; /* idk if looks good*/
 }
 
 .experience-modal-div:focus {

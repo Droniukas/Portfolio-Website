@@ -2,8 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body,
+input,
+select,
+button {
   margin-bottom: 0px;
+  font-family: Roboto Mono, monospace;
 }
 
 #main-div {
@@ -14,8 +18,7 @@ body {
   position: relative;
 }
 
-/* gradients */
-/* ----------------------- */
+/* gradients ----------------------- */
 #gradient-circle-container {
   position: fixed;
   left: 0;
@@ -24,21 +27,6 @@ body {
   height: 100%;
   z-index: -1;
 }
-
-/* #gradient-circle {
-  --size: 600px;
-  position: fixed;
-  background: radial-gradient(
-    circle closest-side,
-    var(--main-background-color),
-    var(--main-background-color)
-  );
-  filter: blur(130px);
-  width: var(--size);
-  height: var(--size);
-  transform: translate(-50%, -50%);
-  opacity: 0.7;
-} */
 
 body::before,
 body::after {
@@ -52,8 +40,6 @@ body::before {
   border-radius: 50%;
   width: 30vw;
   height: 30vw;
-  /* width: 300px;
-  height:300px; */
   margin-left: -200px;
   filter: blur(150px);
   top: calc(50vh - 50vw / 2);
@@ -80,11 +66,9 @@ body::after {
   }
   30% {
     transform: translate(32vw, 45vh) scale(0.8);
-    /* transform: translate(450px, 350px) scale(0.8); */
   }
   60% {
     transform: translate(25vw) scale(0.9);
-    /* transform: translate(350px) scale(0.9); */
   }
   100% {
     transform: translateY(0, 0);
@@ -97,7 +81,6 @@ body::after {
   }
   30% {
     transform: translate(-30vh, 38vh) scale(1.2);
-    /* transform: translate(-420px, 300px) scale(1.2); */
   }
   60% {
     transform: translate(-25vw) scale(1);
@@ -106,7 +89,6 @@ body::after {
     transform: translateX(0);
   }
 }
-
 /* ----------------------- */
 
 :root {
@@ -119,7 +101,7 @@ body::after {
   --small-font-size: 16px;
   --smallest-font-size: 11px;
 
-  --sidebar-img-width: 30px;
+  --sidebar-img-width: 25px;
   --sidebar-width: 100px;
 
   --section-margin-bottom: 45px;
@@ -128,8 +110,7 @@ body::after {
 
   --text-animation-curve: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
-  /* gradients */
-  /* ----------------------- */
+  /* gradients ----------------------- */
   --main-green-color: #0bbb87;
   --main-blue-color: #4586ce;
 
@@ -139,7 +120,7 @@ body::after {
     #75d5b9 55deg,
     #97b5da 120deg,
     var(--main-green-color) 160deg,
-    /* #0099ca */ transparent 360deg
+    transparent 360deg
   );
 
   --third-glow: conic-gradient(
@@ -161,7 +142,7 @@ body::after {
     --small-font-size: 10px;
     --smallest-font-size: 9px;
 
-    --sidebar-img-width: 20px;
+    --sidebar-img-width: 15px;
     --sidebar-width: 40px;
   }
 

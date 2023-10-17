@@ -85,7 +85,7 @@ const ContactPage = () => {
           <div id="contact-page-left-side-div">Contact me</div>
           <div id="contact-page-right-side-div">
             <div id="contact-page-right-side-top-div">
-              {`I'm excited to hear from you!`}
+              {`Let's get in touch -`}
               <div className="horizontal-border" ref={horizontalBorderRef} />
             </div>
             <div id="contact-page-right-side-bottom-div">

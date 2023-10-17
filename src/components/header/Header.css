@@ -9,7 +9,7 @@
   cursor: pointer;
   background: var(--main-backdrop-color);
   backdrop-filter: blur(20px) saturate(1.7);
-  /* gradient */
+  /* gradients ----------------------- */
   background: linear-gradient(
     to right,
     var(--main-blue-color),
@@ -39,7 +39,7 @@
     background-position: left;
   }
 }
-/*  */
+/* ----------------------- */
 
 #fixed-buttons-div {
   height: 50px;

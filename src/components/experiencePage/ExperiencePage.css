@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: 60% 40%;
   gap: 20px;
-  /* margin-bottom: 50px; */
-  /* min-height: 650px; */
   flex-wrap: wrap;
 }
 
@@ -46,6 +44,8 @@
   backdrop-filter: blur(20px) saturate(1.7);
   cursor: pointer;
   transition: scale 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .experience-div:hover {
@@ -61,10 +61,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* new addition */
-  /* border-top-left-radius: 10px;
-  border-top-right-radius: 10px; */
-  /* new addition */
 }
 
 .name-div {

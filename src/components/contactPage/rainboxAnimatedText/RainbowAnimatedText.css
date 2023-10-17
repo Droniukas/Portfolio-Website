@@ -14,7 +14,7 @@
 }
 
 .char-animated-animation {
-  --animation-lenght-coefficient: 0.06s;
+  --animation-lenght-coefficient: 0.07s;
   --animation-settings: calc(var(--animation-lenght-coefficient) * 20)
     var(--text-animation-curve)
     calc(var(--animation-lenght-coefficient) * ((var(--index) * 10) / var(--chars))) 1;

@@ -1,4 +1,5 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React from 'react';
+import { useLayoutEffect, useRef } from 'react';
 
 import './SkillsPage.css';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
@@ -6,7 +7,6 @@ import { skills } from './resources/data/skills';
 import { gsap } from '../../config/gsap';
 import { getRandom } from './Utils';
 import sparkleIcon from './resources/images/sparkle-icon.png';
-import angularIcon from './resources/images/angular-icon-min.png';
 
 const SkillsPage = () => {
   const skillsRef = useRef();

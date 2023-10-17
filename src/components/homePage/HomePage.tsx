@@ -56,14 +56,13 @@ const Home = (props: HomeProps) => {
             <div className="page-line" id="home-page-line" />
             <div id="home-page-below-bottom-line-items-div">
               <div id="home-page-additional-text-div">
-                With a freelancer{"'"}s spirit and a programmer{"'"}s passion, I embarked
-                on a journey, blending the realms of 3D visualizations and programming to
-                create digital experiences that leave a mark.{' '}
+                Currently enjoying full-stack web development, experimenting with
+                interesting technologies and trying to become the best at what I do
               </div>
               <div id="home-page-expand-button-div">
                 <a href="#contact">
                   <button className="expand-button">
-                    <span className="expand-button-text text-inhanced">
+                    <span className="text-inhanced">
                       {'Contact me'.split('').map((char, index) => {
                         const style = {
                           '--index': index,

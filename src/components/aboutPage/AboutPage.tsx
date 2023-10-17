@@ -102,16 +102,15 @@ const AboutPage = () => {
                 style={{ width: `${middleDivLeftSideWidth}%` }}
               >
                 <div id="about-page-big-text-div">
-                  My journey as an ambitious full-stack web developer
+                  About me and my software development journey -
                 </div>
                 <div id="about-page-smaller-text-div">
-                  For the past few years I{"'"}ve been loving programming, from designing
-                  to creating the brains/algorythms of software. Curtesy of programming I
-                  have met a lot of great people and have succesfuly overcame many
-                  interesting and unique challenges, with that said I am eager to continue
-                  this journey! Currently I am looking for a new position as a full-stack
-                  web developer
-                  {';)'}
+                  Coming from a background in graphic design, for the past few years, I
+                  {"'"}ve been exploring many programming technologies, but mostly focused
+                  on web development. So far, I have met lots of cool people and overcame
+                  many interesting challenges, and I{"'"}m excited to continue this
+                  journey. Currently, I work mostly with React/Angular, Spring/.NET, but I
+                  {"'"}m always down to take a shot at something new!
                 </div>
               </div>
             </div>

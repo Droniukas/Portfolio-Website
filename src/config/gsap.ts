@@ -13,7 +13,6 @@ gsap.registerEffect({
   effect: (targets, config: registerEffectConfig) => {
     return gsap.from(targets, {
       duration: 0.55,
-      translateY: 7,
       opacity: 0,
       ease: 'power.out',
       scrollTrigger: {

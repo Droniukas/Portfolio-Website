@@ -1,7 +1,7 @@
-import { Button } from '@mui/material';
-import React from 'react';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Button } from '@mui/material';
+import React from 'react';
 import { Direction } from '../../../../Enums/Direction';
 import './BottomButton.css';
 

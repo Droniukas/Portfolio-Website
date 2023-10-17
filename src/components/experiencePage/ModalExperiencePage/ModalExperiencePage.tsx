@@ -1,5 +1,5 @@
-import React, { CSSProperties, useEffect, useState } from 'react';
-import { Modal } from '@mui/material';
+import React from 'react';
+import { useEffect, useState } from 'react';
 import { Experience } from '../../../interfaces/Experience.interface';
 import './ModalExperiencePage.css';
 import CloseButton from './CloseButton/CloseButton';

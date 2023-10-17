@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import AbstractSphere from './AbstractSphere';
 import { PerspectiveCamera } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';

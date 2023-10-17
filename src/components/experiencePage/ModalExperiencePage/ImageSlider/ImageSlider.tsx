@@ -1,5 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+
+import { useState } from 'react';
 import './ImageSlider.css';
 import { SxProps, Theme } from '@mui/material';
 import ImageSliderModal from './ImageSliderModal/ImageSliderModal';

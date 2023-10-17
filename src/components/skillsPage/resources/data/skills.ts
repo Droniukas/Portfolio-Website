@@ -5,15 +5,12 @@ import htmlIcon from '../images/html-icon-min.png';
 import ccsIcon from '../images/css-icon-min.png';
 import jiraIcon from '../images/jira-icon-min.png';
 import javascriptIcon from '../images/javascript-icon-one-min.png';
-import sassIcon from '../images/sass-icon-min.png';
 import reactIcon from '../images/react-icon-min.png';
 import springBootIcon from '../images/spring-boot-icon-min.png';
 import javaIcon from '../images/java-icon-min.png';
 import sqlIcon from '../images/sql-icon-min.png';
 import dockerIcon from '../images/docker-icon-min.png';
 import postgreSqlIcon from '../images/postgresql-icon-min.png';
-import auth0Icon from '../images/auth0-icon-min.png';
-import figmaIcon from '../images/figma-icon-min.png';
 import angularIcon from '../images/angular-icon-min.png';
 import dotNetIcon from '../images/dotNet-icon-min.png';
 import cSharpIcon from '../images/cSharp-icon-min.png';
@@ -36,10 +33,6 @@ export const skills: Skill[] = [
     name: 'CSS',
     image: ccsIcon,
   },
-  // {
-  //   name: 'SCSS',
-  //   image: sassIcon,
-  // },
   {
     name: 'Jira/Agile',
     image: jiraIcon,
@@ -72,14 +65,6 @@ export const skills: Skill[] = [
     name: 'PostgreSql',
     image: postgreSqlIcon,
   },
-  // {
-  //   name: 'Auth0',
-  //   image: auth0Icon,
-  // },
-  // {
-  //   name: 'Figma',
-  //   image: figmaIcon,
-  // },
   {
     name: 'Angular',
     image: angularIcon,

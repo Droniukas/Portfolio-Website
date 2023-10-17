@@ -1,0 +1,19 @@
+.short-logo,
+.short-logo-gradient {
+  height: 17px;
+  transition: opacity 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -19px;
+}
+
+@media all and (max-width: 500px) {
+  .short-logo,
+  .short-logo-gradient {
+    height: 12px;
+  }
+}
+
+.short-logo:hover {
+  opacity: 0;
+}
