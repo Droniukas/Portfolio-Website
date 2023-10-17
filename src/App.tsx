@@ -18,7 +18,6 @@ function App(): JSX.Element {
 
   useEffect(() => {
     ReactGA.initialize('G-NXCB8M73HB');
-    ReactGA.send({ hitType: 'pageview', page: '/', title: 'Hello' });
   }, []);
 
   return (
