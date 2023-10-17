@@ -35,7 +35,7 @@
 
 #logo-texts-container {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-left: -12px;
   margin-top: 12px;
 }
