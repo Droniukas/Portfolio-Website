@@ -17,7 +17,7 @@ function App(): JSX.Element {
   }, []);
 
   useEffect(() => {
-    ReactGA.initialize('your GA measurement id');
+    ReactGA.initialize('G-NXCB8M73HB');
     ReactGA.send({ hitType: 'pageview', page: '/', title: 'Hello' });
   }, []);
 
