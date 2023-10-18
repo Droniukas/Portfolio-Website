@@ -7,6 +7,7 @@ import { Canvas } from '@react-three/fiber';
 import CanvasElements from './CanvasElements';
 import { gsap } from '../../config/gsap';
 import * as THREE from 'three';
+import { CustomEvent } from '@piwikpro/react-piwik-pro';
 
 type HomeProps = {
   sphereTexture: THREE.Texture;
@@ -59,7 +60,16 @@ const Home = (props: HomeProps) => {
                 Currently enjoying full-stack web development, experimenting with
                 interesting technologies and trying to become the best at what I do
               </div>
-              <div id="home-page-expand-button-div">
+              <div
+                onClick={() => {
+                  CustomEvent.trackEvent(
+                    'button',
+                    'click',
+                    'Contact me home page button click',
+                  );
+                }}
+                id="home-page-expand-button-div"
+              >
                 <a href="#contact">
                   <button className="expand-button">
                     <span className="text-inhanced">

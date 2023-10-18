@@ -5,6 +5,7 @@ import ImageSliderArrows from '../ImageSliderArrows/ImageSliderArrows';
 import ImageSliderPickers from '../ImageSliderPickers/ImageSliderPickers';
 import './ImageSliderModal.css';
 import ReactGA from 'react-ga4';
+import { CustomEvent } from '@piwikpro/react-piwik-pro';
 
 type ImageModalProps = {
   images: string[];
@@ -37,6 +38,7 @@ const ImageSliderModal = (props: ImageModalProps) => {
       action: 'Image arrow click',
       label: 'Big image previous',
     });
+    CustomEvent.trackEvent('image', 'click', `Changed big image`);
     if (currentIndex === 0) {
       setCurrentIndex(images.length - 1);
     } else {
@@ -50,6 +52,7 @@ const ImageSliderModal = (props: ImageModalProps) => {
       action: 'Image arrow click',
       label: 'Big image next',
     });
+    CustomEvent.trackEvent('image', 'click', `Changed big image`);
     if (currentIndex === images.length - 1) {
       setCurrentIndex(0);
     } else {

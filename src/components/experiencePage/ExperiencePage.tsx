@@ -20,8 +20,9 @@ const ExperiencePage = () => {
   const openModalId = Number(searchParams.get('openModalId'));
 
   const closeModal = () => {
-    setSearchParams(() => {
-      return {};
+    setSearchParams((prev) => {
+      prev.delete('openModalId');
+      return prev;
     });
   };
 

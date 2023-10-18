@@ -5,9 +5,13 @@ import Sidebar from './components/sidebar/Sidebar';
 import sky from './resources/images/static-gradient-3.jpg';
 import * as THREE from 'three';
 import ReactGA from 'react-ga4';
+import { useSearchParams } from 'react-router-dom';
+import { UserManagement } from '@piwikpro/react-piwik-pro';
+import PiwikPro from '@piwikpro/react-piwik-pro';
 
 function App(): JSX.Element {
   const [sphereTexture, setSphereTexture] = useState<THREE.Texture>(null);
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
@@ -18,6 +22,17 @@ function App(): JSX.Element {
 
   useEffect(() => {
     ReactGA.initialize('G-NXCB8M73HB');
+    ReactGA.send({ hitType: 'pageview', page: '/', title: 'Opened the app' });
+  }, []);
+
+  useEffect(() => {
+    const userRef = searchParams.get('ref') || 'none';
+    console.log(userRef);
+    PiwikPro.initialize(
+      '7e7c9bae-9ae3-4997-977e-f3875c6b01ee',
+      'https://dronius.containers.piwik.pro',
+    );
+    UserManagement.setUserId(userRef);
   }, []);
 
   return (

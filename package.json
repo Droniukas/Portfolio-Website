@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.14.1",
+    "@piwikpro/react-piwik-pro": "^1.2.1",
     "@react-three/drei": "latest",
     "@react-three/fiber": "latest",
     "@testing-library/jest-dom": "^5.16.5",

@@ -7,6 +7,7 @@ import ImageSliderModal from './ImageSliderModal/ImageSliderModal';
 import ImageSliderPickers from './ImageSliderPickers/ImageSliderPickers';
 import ImageSliderArrows from './ImageSliderArrows/ImageSliderArrows';
 import ReactGA from 'react-ga4';
+import { CustomEvent } from '@piwikpro/react-piwik-pro';
 
 type ImageSliderProps = {
   images: string[];
@@ -26,6 +27,7 @@ const ImageSlider = (props: ImageSliderProps) => {
       action: 'Image arrow click',
       label: 'Small image next',
     });
+    CustomEvent.trackEvent('image', 'click', `Changed image in modal`);
     hideControls();
     if (currentIndex === 0) {
       setCurrentIndex(images.length - 1);
@@ -40,6 +42,7 @@ const ImageSlider = (props: ImageSliderProps) => {
       action: 'Image arrow click',
       label: 'Small image next',
     });
+    CustomEvent.trackEvent('image', 'click', `Changed image in modal`);
     hideControls();
     if (currentIndex === images.length - 1) {
       setCurrentIndex(0);
@@ -67,6 +70,7 @@ const ImageSlider = (props: ImageSliderProps) => {
                   action: 'Click image in modal',
                   label: `${image}`,
                 });
+                CustomEvent.trackEvent('image', 'click', `Clicked on image - ${image}`);
                 setImageModalOpen(true);
               }}
               key={image}

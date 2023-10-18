@@ -60,6 +60,13 @@ body::after {
   z-index: -10;
 }
 
+@media all and (min-width: 2000px) {
+  body::after,
+  body::before {
+    opacity: 0.5;
+  }
+}
+
 @keyframes animateBefore {
   0% {
     transform: translate(0, 0);
