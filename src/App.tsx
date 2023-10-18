@@ -27,7 +27,6 @@ function App(): JSX.Element {
 
   useEffect(() => {
     const userRef = searchParams.get('ref') || 'none';
-    console.log(userRef);
     PiwikPro.initialize(
       '7e7c9bae-9ae3-4997-977e-f3875c6b01ee',
       'https://dronius.containers.piwik.pro',
