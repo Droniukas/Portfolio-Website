@@ -4,6 +4,7 @@ import CloseButton from '../../CloseButton/CloseButton';
 import ImageSliderArrows from '../ImageSliderArrows/ImageSliderArrows';
 import ImageSliderPickers from '../ImageSliderPickers/ImageSliderPickers';
 import './ImageSliderModal.css';
+import ReactGA from 'react-ga4';
 
 type ImageModalProps = {
   images: string[];
@@ -31,6 +32,11 @@ const ImageSliderModal = (props: ImageModalProps) => {
   }, [open]);
 
   const setPreviousImage = () => {
+    ReactGA.event({
+      category: 'General',
+      action: 'Image arrow click',
+      label: 'Big image previous',
+    });
     if (currentIndex === 0) {
       setCurrentIndex(images.length - 1);
     } else {
@@ -39,6 +45,11 @@ const ImageSliderModal = (props: ImageModalProps) => {
   };
 
   const setNextImage = () => {
+    ReactGA.event({
+      category: 'General',
+      action: 'Image arrow click',
+      label: 'Big image next',
+    });
     if (currentIndex === images.length - 1) {
       setCurrentIndex(0);
     } else {

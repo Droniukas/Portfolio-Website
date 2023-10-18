@@ -6,6 +6,7 @@ import { SxProps, Theme } from '@mui/material';
 import ImageSliderModal from './ImageSliderModal/ImageSliderModal';
 import ImageSliderPickers from './ImageSliderPickers/ImageSliderPickers';
 import ImageSliderArrows from './ImageSliderArrows/ImageSliderArrows';
+import ReactGA from 'react-ga4';
 
 type ImageSliderProps = {
   images: string[];
@@ -20,6 +21,11 @@ const ImageSlider = (props: ImageSliderProps) => {
   const [imageModalOpen, setImageModalOpen] = useState(false);
 
   const setPreviousImage = () => {
+    ReactGA.event({
+      category: 'General',
+      action: 'Image arrow click',
+      label: 'Small image next',
+    });
     hideControls();
     if (currentIndex === 0) {
       setCurrentIndex(images.length - 1);
@@ -29,6 +35,11 @@ const ImageSlider = (props: ImageSliderProps) => {
   };
 
   const setNextImage = () => {
+    ReactGA.event({
+      category: 'General',
+      action: 'Image arrow click',
+      label: 'Small image next',
+    });
     hideControls();
     if (currentIndex === images.length - 1) {
       setCurrentIndex(0);
@@ -51,6 +62,11 @@ const ImageSlider = (props: ImageSliderProps) => {
           return (
             <img
               onClick={() => {
+                ReactGA.event({
+                  category: 'General',
+                  action: 'Click image in modal',
+                  label: `${image}`,
+                });
                 setImageModalOpen(true);
               }}
               key={image}

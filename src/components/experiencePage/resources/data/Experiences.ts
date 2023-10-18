@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
   {
     id: 2,
     images: [devbridgeAcademy, devbridgeAcademy2],
-    name: 'Full-stack developer academy @Devbridge',
+    name: 'Devbridge Full-stack developer academy',
     date: '2023 March - 2023 May',
     place: 'Kaunas, Lithuania',
     description:

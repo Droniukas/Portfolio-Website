@@ -10,6 +10,7 @@ import { useSearchParams } from 'react-router-dom';
 import BottomButton from './ModalExperiencePage/bottomButton/BottomButton';
 import { Direction } from '../../Enums/Direction';
 import { Modal } from '@mui/material';
+import ReactGA from 'react-ga4';
 
 const ExperiencePage = () => {
   const experienceRef = useRef(null);
@@ -57,6 +58,11 @@ const ExperiencePage = () => {
                 <div
                   key={experience.id}
                   onClick={() => {
+                    ReactGA.event({
+                      category: 'General',
+                      action: 'Open experience modal',
+                      label: `${experience.name}`,
+                    });
                     setSearchParams((prev) => {
                       prev.set('openModalId', String(experience.id));
                       return prev;
@@ -98,6 +104,11 @@ const ExperiencePage = () => {
                   return (
                     <BottomButton
                       onClick={() => {
+                        ReactGA.event({
+                          category: 'General',
+                          action: 'Switch to experience',
+                          label: `${nextExperience.name}`,
+                        });
                         switchModal(nextExperience.id);
                       }}
                       direction={Direction.RIGHT}
@@ -113,6 +124,11 @@ const ExperiencePage = () => {
                   return (
                     <BottomButton
                       onClick={() => {
+                        ReactGA.event({
+                          category: 'General',
+                          action: 'Switch to experience',
+                          label: `${previousExperience.name}`,
+                        });
                         switchModal(previousExperience.id);
                       }}
                       direction={Direction.LEFT}

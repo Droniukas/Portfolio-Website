@@ -2,6 +2,7 @@ import { IconButton, SxProps, Theme } from '@mui/material';
 import React from 'react';
 import CircleIcon from '@mui/icons-material/Circle';
 import './ImageSliderPickers.css';
+import ReactGA from 'react-ga4';
 
 type ImageSliderPickersProps = {
   images: string[];
@@ -25,6 +26,10 @@ const ImageSliderPickers = (props: ImageSliderPickersProps) => {
             disabled={currentImage}
             key={image}
             onClick={() => {
+              ReactGA.event({
+                category: 'General',
+                action: 'Image picker click',
+              });
               onPickerClick(index);
             }}
             className={pickersClassName}
