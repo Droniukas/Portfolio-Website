@@ -46,7 +46,7 @@ const Home = (props: HomeProps) => {
             </div>
             <div id="greetings-text-div">Hi, my name is</div>
             <div id="name">Domas Raila</div>
-            <div id="current-position">Junior software-developer</div>
+            <div id="current-position">Web/software-developer</div>
           </div>
           <div id="home-page-all-bottom-items-div">
             <div id="home-page-above-bottom-line-items-div">

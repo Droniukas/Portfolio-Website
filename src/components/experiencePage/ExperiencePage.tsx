@@ -11,6 +11,7 @@ import BottomButton from './ModalExperiencePage/bottomButton/BottomButton';
 import { Direction } from '../../Enums/Direction';
 import { Modal } from '@mui/material';
 import ReactGA from 'react-ga4';
+import { CustomEvent } from '@piwikpro/react-piwik-pro';
 
 const ExperiencePage = () => {
   const experienceRef = useRef(null);
@@ -64,6 +65,12 @@ const ExperiencePage = () => {
                       action: 'Open experience modal',
                       label: `${experience.name}`,
                     });
+                    CustomEvent.trackEvent(
+                      'button',
+                      'click',
+                      `experience modal click: ${experience.name}`,
+                    );
+
                     setSearchParams((prev) => {
                       prev.set('openModalId', String(experience.id));
                       return prev;

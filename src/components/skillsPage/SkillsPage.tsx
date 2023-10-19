@@ -33,7 +33,7 @@ const SkillsPage = () => {
           {skills.map((skill) => {
             const starTop = getRandom(0, 100) + '%';
             const starLeft = getRandom(0, 100) + '%';
-            const starAnimationDelay = getRandom(5, 23) + 's';
+            const starAnimationDelay = getRandom(10, 27) + 's';
             return (
               <div key={skill.name} className="skill-div">
                 <div className="skill-img-container">
