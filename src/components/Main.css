@@ -143,10 +143,10 @@ body::after {
 
 @media all and (max-width: 500px) {
   :root {
-    --largest-font-size: 50px;
+    --largest-font-size: 55px;
     --large-font-size: 20px;
     --medium-font-size: 15px;
-    --small-font-size: 10px;
+    --small-font-size: 14px;
     --smallest-font-size: 9px;
 
     --sidebar-img-width: 15px;
