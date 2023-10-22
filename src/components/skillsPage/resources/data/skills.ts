@@ -13,7 +13,7 @@ import dockerIcon from '../images/docker-icon-min.png';
 import postgreSqlIcon from '../images/postgresql-icon-min.png';
 import angularIcon from '../images/angular-icon-min.png';
 import dotNetIcon from '../images/dotNet-icon-min.png';
-import cSharpIcon from '../images/cSharp-icon-min.png';
+import cSharpIcon from '../images/cSharp-icon-min.svg';
 import mySqlIcon from '../images/mySql-icon-min.png';
 
 export const skills: Skill[] = [
