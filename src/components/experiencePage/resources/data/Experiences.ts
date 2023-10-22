@@ -1,14 +1,22 @@
 import { Experience } from '../../../../interfaces/Experience.interface';
 import selfTaughtDev from '../images/self-tought/self-tought-dev.jpg';
+import selfTaughtDevSmall from '../images/self-tought/self-tought-dev-small.jpg';
 import devbridgeAcademy from '../images/devbridge/devbridge-academy.jpg';
 import devbridgeAcademy2 from '../images/devbridge/devbridge-academy-2.jpg';
 import xplicityAcademy from '../images/xplicity/xplicity-academy.jpg';
+import xplicityAcademySmall from '../images/xplicity/xplicity-academy-small.jpg';
 import xplicityAcademy2 from '../images/xplicity/xplicity-academy-2.jpg';
+import devbridgeAcademySmall from '../images/devbridge/devbridge-academy-small.jpg';
 
 export const experiences: Experience[] = [
   {
     id: 1,
-    images: [selfTaughtDev],
+    images: [
+      {
+        image: selfTaughtDev,
+        smallImage: selfTaughtDevSmall,
+      },
+    ],
     name: 'Self-taught programmer',
     date: 'from 2022',
     place: 'Šiauliai, Lithuania',
@@ -24,7 +32,10 @@ export const experiences: Experience[] = [
   },
   {
     id: 2,
-    images: [devbridgeAcademy, devbridgeAcademy2],
+    images: [
+      { image: devbridgeAcademy, smallImage: devbridgeAcademySmall },
+      { image: devbridgeAcademy2 },
+    ],
     name: 'Devbridge Full-stack Developer Academy',
     date: '2023 March - 2023 May',
     place: 'Kaunas, Lithuania',
@@ -42,7 +53,10 @@ export const experiences: Experience[] = [
   },
   {
     id: 3,
-    images: [xplicityAcademy, xplicityAcademy2],
+    images: [
+      { image: xplicityAcademy, smallImage: xplicityAcademySmall },
+      { image: xplicityAcademy2 },
+    ],
     name: 'Xplicity Full-stack Developer Academy',
     date: '2023 August',
     place: 'Kaunas, Lithuania',

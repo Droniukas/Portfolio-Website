@@ -8,9 +8,10 @@ import ImageSliderPickers from './ImageSliderPickers/ImageSliderPickers';
 import ImageSliderArrows from './ImageSliderArrows/ImageSliderArrows';
 import ReactGA from 'react-ga4';
 import { CustomEvent } from '@piwikpro/react-piwik-pro';
+import { ExperienceImage } from '../../../../interfaces/ExperienceImage.interface';
 
 type ImageSliderProps = {
-  images: string[];
+  images: ExperienceImage[];
   hideControls: () => void;
   controlsAreHidden: boolean;
   className?: string;
@@ -73,8 +74,8 @@ const ImageSlider = (props: ImageSliderProps) => {
                 CustomEvent.trackEvent('image', 'click', `Clicked on image - ${image}`);
                 setImageModalOpen(true);
               }}
-              key={image}
-              src={image}
+              key={image.image}
+              src={image.image}
               className={`image-slider-image ${currentImage && 'visible'}`}
             />
           );

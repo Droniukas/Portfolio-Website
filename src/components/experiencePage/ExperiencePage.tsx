@@ -79,7 +79,10 @@ const ExperiencePage = () => {
                   className="experience-div"
                 >
                   <div className="experience-photo-div">
-                    <img src={experience.images[0]} className="experience-img" />
+                    <img
+                      src={experience.images[0].smallImage || experience.images[0].image}
+                      className="experience-img"
+                    />
                   </div>
                   <div
                     style={{

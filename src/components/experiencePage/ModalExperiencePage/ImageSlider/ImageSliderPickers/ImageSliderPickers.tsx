@@ -3,9 +3,10 @@ import React from 'react';
 import CircleIcon from '@mui/icons-material/Circle';
 import './ImageSliderPickers.css';
 import ReactGA from 'react-ga4';
+import { ExperienceImage } from '../../../../../interfaces/ExperienceImage.interface';
 
 type ImageSliderPickersProps = {
-  images: string[];
+  images: ExperienceImage[];
   onPickerClick: (index: number) => void;
   currentIndex: number;
   className?: string;
@@ -24,7 +25,7 @@ const ImageSliderPickers = (props: ImageSliderPickersProps) => {
         return (
           <IconButton
             disabled={currentImage}
-            key={image}
+            key={image.image}
             onClick={() => {
               ReactGA.event({
                 category: 'General',

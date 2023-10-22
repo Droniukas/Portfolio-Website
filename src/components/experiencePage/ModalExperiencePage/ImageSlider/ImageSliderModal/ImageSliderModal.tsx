@@ -6,9 +6,10 @@ import ImageSliderPickers from '../ImageSliderPickers/ImageSliderPickers';
 import './ImageSliderModal.css';
 import ReactGA from 'react-ga4';
 import { CustomEvent } from '@piwikpro/react-piwik-pro';
+import { ExperienceImage } from '../../../../../interfaces/ExperienceImage.interface';
 
 type ImageModalProps = {
-  images: string[];
+  images: ExperienceImage[];
   open: boolean;
   handleClose: () => void;
   initialImageIndex: number;
@@ -71,7 +72,7 @@ const ImageSliderModal = (props: ImageModalProps) => {
       }}
     >
       <div className="image-slider-modal-container">
-        <img src={images[currentIndex]} className="image-slider-modal-image" />
+        <img src={images[currentIndex].image} className="image-slider-modal-image" />
 
         <CloseButton handleClose={handleClose} />
 

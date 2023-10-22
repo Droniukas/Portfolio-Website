@@ -1,6 +1,8 @@
+import { ExperienceImage } from './ExperienceImage.interface';
+
 export interface Experience {
   id: number;
-  images: string[];
+  images: ExperienceImage[];
   name: string;
   date: string;
   place: string;
