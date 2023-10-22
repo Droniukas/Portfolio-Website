@@ -6,7 +6,7 @@ import SectionSeperator from '../sectionSeperator/SectionSeperator';
 import { skills } from './resources/data/skills';
 import { gsap } from '../../config/gsap';
 import { getRandom } from './Utils';
-import sparkleIcon from './resources/images/sparkle-icon.png';
+import sparkleIcon from './resources/images/sparkle-icon.svg';
 
 const SkillsPage = () => {
   const skillsRef = useRef();
