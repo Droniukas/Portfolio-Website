@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import './HomePage.css';
-import starIcon from './star-icon.png';
-import minus from './minus.png';
+import starIcon from './resources/images/star-icon.svg';
+import minus from './resources/images/minus.svg';
 
 import { Canvas } from '@react-three/fiber';
 import CanvasElements from './CanvasElements';
@@ -50,8 +50,8 @@ const Home = (props: HomeProps) => {
           </div>
           <div id="home-page-all-bottom-items-div">
             <div id="home-page-above-bottom-line-items-div">
-              <img src={starIcon} id="home-page-star-icon-img" />
-              <img src={minus} id="home-page-star-icon-img" />
+              <img src={starIcon} className="home-page-icon-img" />
+              <img src={minus} className="home-page-icon-img" />
               <div id="above-line-text">constantly seeking new challenges</div>
             </div>
             <div className="page-line" id="home-page-line" />

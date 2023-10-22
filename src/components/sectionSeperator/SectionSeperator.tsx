@@ -1,5 +1,5 @@
 import React from 'react';
-import starIconBlack from './resources/images/star-christmas-black.png';
+import starIconBlack from './resources/images/star-christmas-black-2.svg';
 import './SectionSeperator.css';
 
 type SectionSeperatorProps = {

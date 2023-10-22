@@ -48,7 +48,7 @@ const Logo = () => {
     const context = gsap.context(() => {
       gsap.to(morphData, {
         morphRatio: 0,
-        duration: 0.7,
+        duration: 0.5,
         overwrite: true,
         onStart: () => {
           logoTextsContainerRef.current.style.filter = 'url(#threshold) blur(0.4px)';
