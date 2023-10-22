@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import SectionSeperator from '../sectionSeperator/SectionSeperator';
-import profilePhoto from './resources/images/profile-photo-mid.jpg';
+import profilePhoto from './resources/images/profile-photo-mid-2.jpg';
 import './AboutPage.css';
 import { calculateMiddleDivLeftSideWidth } from './Utils';
 import { gsap } from '../../config/gsap';
