@@ -62,7 +62,7 @@ export const skills: Skill[] = [
     image: dockerIcon,
   },
   {
-    name: 'PostgreSql',
+    name: 'PostgreSQL',
     image: postgreSqlIcon,
   },
   {
