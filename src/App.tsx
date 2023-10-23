@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './components/header/Header';
 import Main from './components/Main';
 import Sidebar from './components/sidebar/Sidebar';
-import sky from './resources/images/static-gradient-3.jpg';
+import sky from './resources/images/static-gradient-5.jpg';
 import * as THREE from 'three';
 import ReactGA from 'react-ga4';
 import { useSearchParams } from 'react-router-dom';
