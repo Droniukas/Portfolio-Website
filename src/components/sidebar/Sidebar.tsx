@@ -11,14 +11,18 @@ const Sidebar = () => {
     <div id="sidebar-div">
       <Logo />
       <div id="sidebar-icons">
-        <div className="sidebar-img-container">
-          <img src={githubIconGradient} className="sidebar-img" />
-          <img src={githubIconBlack} className="sidebar-img initial-sidebar-img" />
-        </div>
-        <div className="sidebar-img-container">
-          <img src={linkedinIconGradient} className="sidebar-img" />
-          <img src={linkedinIconBlack} className="sidebar-img initial-sidebar-img" />
-        </div>
+        <a href="https://github.com/Droniukas">
+          <div className="sidebar-img-container">
+            <img src={githubIconGradient} className="sidebar-img" />
+            <img src={githubIconBlack} className="sidebar-img initial-sidebar-img" />
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/domas-raila-54294b180/">
+          <div className="sidebar-img-container">
+            <img src={linkedinIconGradient} className="sidebar-img" />
+            <img src={linkedinIconBlack} className="sidebar-img initial-sidebar-img" />
+          </div>
+        </a>
       </div>
     </div>
   );
