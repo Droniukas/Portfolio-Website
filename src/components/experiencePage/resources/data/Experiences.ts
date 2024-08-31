@@ -68,8 +68,7 @@ export const experiences: Experience[] = [
     modal: {
       longerDescription: `
       Here with the team, we developed a full-stack web application that also won first place! 
-      Apart from the main project we also participated in team-building events and multiple lectures. 
-      We had to work fast which led to us spending a lot of time working together. 
+      Apart from the main project we also participated in team-building events and multiple lectures.
       Here we mainly used .NET/C#, Angular and Azure DevOps.
       `,
     },
