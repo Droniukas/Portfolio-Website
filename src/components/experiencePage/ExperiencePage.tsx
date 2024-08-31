@@ -28,6 +28,19 @@ const ExperiencePage = () => {
   };
 
   useEffect(() => {
+    const closeModalIfKeyIfEscape = (event: KeyboardEvent) => {
+      console.log(event)
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    }
+    addEventListener('keydown', closeModalIfKeyIfEscape);
+    return () => {
+      removeEventListener('keydown', closeModalIfKeyIfEscape);
+    }
+  }, [closeModal])
+
+  useEffect(() => {
     if (openModalId) {
       setModalOpen(true);
     } else {

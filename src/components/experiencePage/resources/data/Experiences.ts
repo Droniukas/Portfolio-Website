@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     date: 'from Dec 2023',
     place: 'Remote/Šiauliai lithuania',
     description:
-      "This is where I started my proffesional career. Here I've worked on multiple projects, and met lot's of cool people.",
+      "This is where I started my professional career. Here I've worked on multiple projects and met lots of cool people.",
     modal: {
       longerDescription: `
         Intus Windows is one of the main window manufacturers in the USA that has an office/factory in Lithuania. 
@@ -47,11 +47,11 @@ export const experiences: Experience[] = [
       'Here me and the team built a full-stack web application with Spring and React in 3 months.',
     modal: {
       longerDescription: `
-      Here, me and other aspiring developers created a web application that won first place. 
-      Throught the academy we worked together trying to succesfully create a the application in our 3 month deadline. 
-      I also got to participate in workshops about DevOps and testing. 
-      One of my favorite parts of the project I was responsible for was a real-time notification system that used a WebSocket connection. 
-      The main technologies we used were React, Java with Spring.
+        Here, I and other aspiring developers created a web application that won first place. 
+        Throughout the academy, we worked together trying to successfully create an application in our 3-month deadline. 
+        I also got to participate in workshops about DevOps and testing. 
+        One of my favorite parts of the project I was responsible for was a real-time notification system that used a WebSocket connection. 
+        The main technologies we used were React and Java with Spring.
       `,
     },
   },
@@ -69,7 +69,7 @@ export const experiences: Experience[] = [
       longerDescription: `
       Here with the team, we developed a full-stack web application that also won first place! 
       Apart from the main project we also participated in team-building events and multiple lectures.
-      Here we mainly used .NET/C#, Angular and Azure DevOps.
+      Here we mainly used .NET/C#, Angular, and Azure DevOps.
       `,
     },
   },
