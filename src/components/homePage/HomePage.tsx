@@ -52,13 +52,12 @@ const Home = (props: HomeProps) => {
             <div id="home-page-above-bottom-line-items-div">
               <img src={starIcon} className="home-page-icon-img" />
               <img src={minus} className="home-page-icon-img" />
-              <div id="above-line-text">constantly seeking new challenges</div>
+              <div id="above-line-text">software developer</div>
             </div>
             <div className="page-line" id="home-page-line" />
             <div id="home-page-below-bottom-line-items-div">
               <div id="home-page-additional-text-div">
-                Currently enjoying full-stack web development, experimenting with
-                interesting technologies and trying to become the best at what I do
+                I work mostly with React, Angular, and .NET.
               </div>
               <div
                 onClick={() => {

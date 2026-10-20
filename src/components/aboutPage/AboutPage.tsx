@@ -102,15 +102,13 @@ const AboutPage = () => {
                 style={{ width: `${middleDivLeftSideWidth}%` }}
               >
                 <div id="about-page-big-text-div">
-                  About me and my software development journey -
+                  About me -
                 </div>
                 <div id="about-page-smaller-text-div">
-                  Coming from a background in graphic design, for the past few years, I
-                  {"'"}ve been exploring many programming technologies, but mostly focused
-                  on web development. So far, I have met lots of cool people and overcame
-                  many interesting challenges, and I{"'"}m excited to continue this
-                  journey. Currently, I work mostly with React/Angular, Spring/.NET, but I
-                  {"'"}m always down to take a shot at something new!
+                  I work as a software developer, mostly with React, Angular, and .NET. I
+                  taught myself programming, then did two developer academies, and now
+                  work at Intus Windows. Before that I ran a small business making real
+                  estate visualizations.
                 </div>
               </div>
             </div>

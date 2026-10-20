@@ -7,11 +7,44 @@ import xplicityAcademy2 from '../images/xplicity/xplicity-academy-2.jpg';
 import devbridgeAcademySmall from '../images/devbridge/devbridge-academy-small.jpg';
 import groupOfficePhotoIntus from '../images/intus/group-office-phoyo.png'
 import presentationIntus from '../images/intus/presentation.jpg'
+import placeholder from '../images/placeholder.svg'
 
 
 export const experiences: Experience[] = [
   {
     id: 1,
+    images: [{ image: placeholder, smallImage: placeholder }],
+    name: 'Sales at Southwestern Advantage',
+    date: 'Dec 2025 - May 2026',
+    place: 'Lithuania',
+    description:
+      'I learned sales and worked in stores for Save the Children, talking to people about the organization.',
+    modal: {
+      longerDescription: `
+        From December 2025 to May 2026 I practiced sales with salespeople from the U.S. and Lithuania.
+        I worked at Save the Children, often about 10 hours a day in stores, telling people about the organization and how they can help children.
+      `,
+    },
+  },
+  {
+    id: 2,
+    images: [{ image: placeholder, smallImage: placeholder }],
+    name: 'Service in the Lithuanian military',
+    date: 'Dec 2024 - Sep 2025',
+    place: 'Lithuania',
+    description:
+      'I served in the Lithuanian military and finished with a good evaluation.',
+    modal: {
+      longerDescription: `
+        I served from December 2024 to September 2025.
+        The days followed a strict schedule, starting with an early morning and exercise.
+        During field exercises I spent several days outside, whatever the weather.
+        I worked with a team on shared tasks, and I finished with a good evaluation.
+      `,
+    },
+  },
+  {
+    id: 3,
     images: [
       {
         image: presentationIntus,
@@ -22,54 +55,67 @@ export const experiences: Experience[] = [
       }
     ],
     name: 'Software developer at Intus Windows',
-    date: 'from Dec 2023',
-    place: 'Remote/Šiauliai lithuania',
+    date: 'Dec 2023 - present',
+    place: 'Remote/Šiauliai, Lithuania',
     description:
-      "This is where I started my professional career. Here I've worked on multiple projects and met lots of cool people.",
+      'I work with my team on the company applications. We help each other solve problems.',
     modal: {
       longerDescription: `
-        Intus Windows is one of the main window manufacturers in the USA that has an office/factory in Lithuania. 
-        Here I worked on a large range of different projects, had to work with many different teams and departments of the company, met lots of people, and learned a lot about other systems. 
-        I'm very thankful for my manager who put me on different projects, not only letting me work with different teams but also letting me develop an application where I was the only developer from start to finish. 
-        The general technologies I worked with were mainly React, Angular, and .Net/C#. Overall the company had a great culture, and people were great fun to work with.`,
+        Intus Windows is a U.S. window company with an office in Lithuania.
+        I have worked here since December 2023. Before this job I taught myself programming for a year and did two developer academies.
+        Day to day I work with a team, and we help each other solve problems.`,
     },
   },
   {
-    id: 2,
-    images: [
-      { image: devbridgeAcademy, smallImage: devbridgeAcademySmall },
-      { image: devbridgeAcademy2 },
-    ],
-    name: 'Devbridge Full-stack Developer Academy',
-    date: '2023 March - 2023 May',
-    place: 'Kaunas, Lithuania',
-    description:
-      'Here me and the team built a full-stack web application with Spring and React in 3 months.',
-    modal: {
-      longerDescription: `
-        Here, I and other aspiring developers created a web application that won first place. 
-        Throughout the academy, we worked together trying to successfully create an application in our 3-month deadline. 
-        I also got to participate in workshops about DevOps and testing. 
-        One of my favorite parts of the project I was responsible for was a real-time notification system that used a WebSocket connection. 
-        The main technologies we used were React and Java with Spring.
-      `,
-    },
-  },
-  {
-    id: 3,
+    id: 4,
     images: [
       { image: xplicityAcademy, smallImage: xplicityAcademySmall },
       { image: xplicityAcademy2 },
     ],
     name: 'Xplicity Full-stack Developer Academy',
-    date: '2023 August',
+    date: 'August 2023',
     place: 'Kaunas, Lithuania',
-    description: 'Here we developed a full-stack web application with Angular and .NET.',
+    description:
+      'With a team we built an application, presented it, and won first place.',
     modal: {
       longerDescription: `
-      Here with the team, we developed a full-stack web application that also won first place! 
-      Apart from the main project we also participated in team-building events and multiple lectures.
-      Here we mainly used .NET/C#, Angular, and Azure DevOps.
+      This was a developer academy at Xplicity in August 2023.
+      We built an application, presented it, and won first place.
+      We used Angular and .NET.
+      `,
+    },
+  },
+  {
+    id: 5,
+    images: [
+      { image: devbridgeAcademy, smallImage: devbridgeAcademySmall },
+      { image: devbridgeAcademy2 },
+    ],
+    name: 'Devbridge Full-stack Developer Academy',
+    date: 'March 2023 - May 2023',
+    place: 'Kaunas, Lithuania',
+    description: 'With a team we built an application and won first place.',
+    modal: {
+      longerDescription: `
+        This was a developer academy at Devbridge (Cognizant), from March to May 2023.
+        We built an application as a team and won first place.
+        We used React and Java with Spring.
+      `,
+    },
+  },
+  {
+    id: 6,
+    images: [{ image: placeholder, smallImage: placeholder }],
+    name: 'Domas Projects',
+    date: 'Sep 2021 - Dec 2022',
+    place: 'Šiauliai, Lithuania',
+    description:
+      'I ran a small business making real estate visualizations from architectural drawings.',
+    modal: {
+      longerDescription: `
+        From September 2021 to December 2022 I ran Domas Projects on my own.
+        I made virtual visualizations of real estate from architectural drawings for clients I found online.
+        I talked with them about what they needed and managed each project from start to finish.
       `,
     },
   },
