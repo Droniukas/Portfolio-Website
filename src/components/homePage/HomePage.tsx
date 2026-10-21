@@ -44,7 +44,7 @@ const Home = (props: HomeProps) => {
                 <CanvasElements sphereTexture={sphereTexture} canvasRef={canvasRef} />
               </Canvas>
             </div>
-            <div id="greetings-text-div">Hi, my name is</div>
+            <div id="greetings-text-div">My name is</div>
             <div id="name">Domas Raila</div>
             <div id="current-position">Web/software-developer</div>
           </div>
