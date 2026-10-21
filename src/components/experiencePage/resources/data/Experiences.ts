@@ -7,13 +7,15 @@ import xplicityAcademy2 from '../images/xplicity/xplicity-academy-2.jpg';
 import devbridgeAcademySmall from '../images/devbridge/devbridge-academy-small.jpg';
 import groupOfficePhotoIntus from '../images/intus/group-office-phoyo.png'
 import presentationIntus from '../images/intus/presentation.jpg'
-import placeholder from '../images/placeholder.svg'
+import pinkingWorkshop from '../images/pinking-workshop.jpg';
+import army from '../images/army.jpeg';
+import visualizationExample from '../images/visualization-example.jpeg';
 
 
 export const experiences: Experience[] = [
   {
     id: 1,
-    images: [{ image: placeholder, smallImage: placeholder }],
+    images: [{ image: pinkingWorkshop, smallImage: pinkingWorkshop }],
     name: 'Sales at Southwestern Advantage',
     date: 'Dec 2025 - May 2026',
     place: 'Lithuania',
@@ -28,7 +30,7 @@ export const experiences: Experience[] = [
   },
   {
     id: 2,
-    images: [{ image: placeholder, smallImage: placeholder }],
+    images: [{ image: army, smallImage: army }],
     name: 'Service in the Lithuanian military',
     date: 'Dec 2024 - Sep 2025',
     place: 'Lithuania',
@@ -105,7 +107,7 @@ export const experiences: Experience[] = [
   },
   {
     id: 6,
-    images: [{ image: placeholder, smallImage: placeholder }],
+    images: [{ image: visualizationExample, smallImage: visualizationExample }],
     name: 'Domas Projects',
     date: 'Sep 2021 - Dec 2022',
     place: 'Šiauliai, Lithuania',
